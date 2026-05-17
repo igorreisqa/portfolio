@@ -927,7 +927,7 @@ footer {
       <span class="line3">de verdade.</span>
     </h1>
     <p class="hero-desc">
-      Sou <strong>Igor Reis</strong>, desenvolvedor web especializado em saúde e negócios. Tenho <strong>8 anos de experiência na área hospitalar</strong> e <strong>7 anos no varejo</strong>, ambas na distribuição — e combino essa vivência com desenvolvimento moderno para criar sistemas que resolvem problemas reais.
+      Sou <strong>Igor Reis</strong>, desenvolvedor web especializado em sistemas web para a área de saúde. Tenho <strong>8 anos de experiência na área hospitalar</strong> e <strong>7 anos no varejo</strong>, ambas na distribuição — e combino essa vivência com desenvolvimento moderno para criar sistemas que resolvem problemas reais.
     </p>
     <div class="hero-actions">
       <a href="#projeto" class="btn-g">Ver meu projeto →</a>
@@ -1228,18 +1228,8 @@ footer {
   fills.forEach(f => observer.observe(f));
 
   // Contador GoatCounter
-  fetch('https://devigorreis.goatcounter.com/api/v0/stats/total', {
-    headers: { 'Content-Type': 'application/json' }
-  })
-  .then(r => r.json())
-  .then(data => {
-    const el = document.getElementById('visit-counter');
-    if (el && data.total) el.textContent = '👁 ' + data.total.toLocaleString('pt-BR') + ' visitas';
-  })
-  .catch(() => {
-    const el = document.getElementById('visit-counter');
-    if (el) el.textContent = '';
-  });
+  const el = document.getElementById('visit-counter');
+  if(el) el.innerHTML = '👁 <img src="https://devigorreis.goatcounter.com/counter//portfolio/.svg" style="height:16px;vertical-align:middle;opacity:0.8;" onerror="this.parentElement.style.display=\'none\'">';
 </script>
 
 </body>
