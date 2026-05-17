@@ -4,6 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Igor Reis — Desenvolvedor Web</title>
+<meta name="description" content="Igor Reis, desenvolvedor web especializado em sistemas para a área de saúde. 8 anos de experiência hospitalar + desenvolvimento moderno com HTML, CSS, JavaScript e Firebase.">
+<meta property="og:title" content="Igor Reis — Desenvolvedor Web">
+<meta property="og:description" content="Desenvolvedor web especializado em sistemas hospitalares. Projeto em produção: Monitor Cirúrgico. Disponível para novos projetos.">
+<meta property="og:image" content="https://raw.githubusercontent.com/devigorreis/portfolio/main/monitorcirurgico.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Igor Reis — Desenvolvedor Web">
+<meta name="twitter:description" content="Desenvolvedor web especializado em sistemas hospitalares. Projeto em produção: Monitor Cirúrgico.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/devigorreis/portfolio/main/monitorcirurgico.png">
 <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Fraunces:ital,wght@0,300;1,300;1,700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script data-goatcounter="https://devigorreis.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <style>
@@ -104,7 +114,6 @@ nav {
   padding: 8px 20px;
   border-radius: 8px;
   font-weight: 700 !important;
-  color: var(--bg);
 }
 
 /* ─── HERO ─── */
@@ -880,9 +889,65 @@ footer {
 }
 
 /* ─── RESPONSIVE ─── */
+/* ─── HAMBURGER ─── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nav-hamburger span {
+  display: block;
+  height: 2px;
+  background: var(--grey);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease, background 0.2s;
+}
+
+.nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); background: var(--green); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); background: var(--green); }
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 64px;
+  left: 0; right: 0;
+  background: rgba(6,10,9,0.97);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border2);
+  padding: 16px 20px 24px;
+  z-index: 998;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mobile-menu.open { display: flex; }
+
+.mobile-menu a {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--grey);
+  text-decoration: none;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border2);
+  transition: color 0.2s;
+}
+
+.mobile-menu a:last-child { border-bottom: none; color: var(--green); }
+.mobile-menu a:hover { color: var(--green); }
+
 @media (max-width: 900px) {
   nav { padding: 0 20px; }
   .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
   .hero { grid-template-columns: 1fr; padding: 80px 20px 40px; gap: 40px; }
   .hero-right { display: none; }
   .stats-bar { grid-template-columns: repeat(2,1fr); padding: 0 20px; }
@@ -914,6 +979,16 @@ footer {
     <li><a href="#habilidades">Skills</a></li>
     <li><a href="#contato" class="nav-cta">Contratar</a></li>
   </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile">
+  <a href="#sobre" class="mobile-menu-link">Sobre</a>
+  <a href="#projeto" class="mobile-menu-link">Projeto</a>
+  <a href="#habilidades" class="mobile-menu-link">Skills</a>
+  <a href="#contato" class="mobile-menu-link">Contratar →</a>
 </nav>
 
 <!-- HERO -->
@@ -986,7 +1061,7 @@ footer {
     <div class="stat-l">Anos de experiência</div>
   </div>
   <div class="stat">
-    <div class="stat-n">6+</div>
+    <div class="stat-n">8+</div>
     <div class="stat-l">Anos na área hospitalar</div>
   </div>
   <div class="stat">
@@ -1053,7 +1128,7 @@ footer {
     <div style="padding: 0 48px; margin-top: 32px;">
       <div style="font-family:'DM Mono',monospace;font-size:0.7rem;color:var(--grey);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:14px;">// preview do sistema</div>
       <div style="border-radius:14px;overflow:hidden;border:1px solid var(--border2);box-shadow:0 24px 60px rgba(0,0,0,0.5);">
-        <img src="https://raw.githubusercontent.com/devigorreis/portfolio/main/monitorcirurgico.png" alt="Monitor Cirúrgico — Sistema em produção" style="width:100%;display:block;">
+        <img src="https://raw.githubusercontent.com/devigorreis/portfolio/main/monitorcirurgico.png" alt="Monitor Cirúrgico — Sistema em produção" loading="lazy" style="width:100%;display:block;">
       </div>
     </div>
     <div style="padding: 0 48px; margin-top: 48px;">
@@ -1137,7 +1212,7 @@ footer {
       </div>
     </div>
     <div>
-      <div class="skill-group-title" style="font-family:'DM Mono',monospace;font-size:0.7rem;color:var(--grey);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border2)"">// nichos de atuação</div>
+      <div class="skill-group-title" style="font-family:'DM Mono',monospace;font-size:0.7rem;color:var(--grey);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border2)">// nichos de atuação</div>
       <div class="nicho-cards">
         <div class="nicho-card">
           <div class="nicho-icon">🏥</div>
@@ -1167,19 +1242,19 @@ footer {
       <h2>Vamos criar algo <em>juntos?</em></h2>
       <p>Estou disponível para projetos de sites, landing pages e sistemas web. Entre em contato e vamos conversar sobre como posso ajudar o seu negócio.</p>
       <div class="contato-items">
-        <a href="mailto:igorreis89@gmail.com" class="contato-link">
+        <a href="mailto:igorreis89@gmail.com" class="contato-link" aria-label="Enviar e-mail para igorreis89@gmail.com">
           <div class="contato-link-icon">📧</div>
           igorreis89@gmail.com
         </a>
-        <a href="tel:+5567991409831" class="contato-link">
+        <a href="tel:+5567991409831" class="contato-link" aria-label="Ligar para (67) 99140-9831">
           <div class="contato-link-icon">📱</div>
           (67) 99140-9831
         </a>
-        <a href="https://linkedin.com/in/ireis89" target="_blank" class="contato-link">
+        <a href="https://linkedin.com/in/ireis89" target="_blank" rel="noopener noreferrer" class="contato-link" aria-label="Perfil no LinkedIn de Igor Reis (abre em nova aba)">
           <div class="contato-link-icon">💼</div>
           linkedin.com/in/ireis89
         </a>
-        <a href="https://wa.me/5567991409831" target="_blank" class="contato-link">
+        <a href="https://wa.me/5567991409831" target="_blank" rel="noopener noreferrer" class="contato-link" aria-label="Conversar no WhatsApp (abre em nova aba)">
           <div class="contato-link-icon">💬</div>
           WhatsApp
         </a>
@@ -1203,7 +1278,7 @@ footer {
 </div>
 
 <footer>
-  <div class="footer-left">Desenvolvido por <span>Igor Reis</span> · Campo Grande/MS · 2025</div>
+  <div class="footer-left">Desenvolvido por <span>Igor Reis</span> · Campo Grande/MS · 2026</div>
   <div class="footer-right" style="display:flex;align-items:center;gap:16px;">
     <span id="visit-counter" style="color:#8a9e97;font-size:0.8rem;">👁 carregando...</span>
     HTML · CSS · JavaScript
@@ -1226,6 +1301,22 @@ footer {
     });
   }, { threshold: 0.3 });
   fills.forEach(f => observer.observe(f));
+
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+  document.querySelectorAll('.mobile-menu-link').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
 
   // Contador GoatCounter
   const el = document.getElementById('visit-counter');
