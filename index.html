@@ -1568,7 +1568,7 @@ footer {
 </div><!-- /overflow wrapper -->
 
 <footer>
-  <div class="footer-left">Desenvolvido por <span>Igor Reis</span> · Campo Grande/MS · 2026</div>
+  <div class="footer-left">&copy; 2025–2026 <span>Igor Reis</span> &middot; Campo Grande/MS &middot; Todos os direitos reservados</div>
   <div class="footer-right">
     <span id="visit-counter">👁 ...</span>
     <span>HTML · CSS · JS · Firebase</span>
@@ -1618,6 +1618,17 @@ footer {
   // GoatCounter visit counter
   const el = document.getElementById('visit-counter');
   if (el) el.innerHTML = '👁 <img src="https://devigorreis.goatcounter.com/counter//portfolio/.svg" style="height:15px;vertical-align:middle;opacity:0.75;" onerror="this.parentElement.style.display=\'none\'">';
+
+  // ─── PROTEÇÃO DE CÓDIGO ───
+  (function() {
+    document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+    document.addEventListener('keydown', function(e) {
+      if (e.keyCode === 123) { e.preventDefault(); return false; }
+      if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) { e.preventDefault(); return false; }
+      if (e.ctrlKey && e.keyCode === 85) { e.preventDefault(); return false; }
+      if (e.ctrlKey && e.keyCode === 83) { e.preventDefault(); return false; }
+    });
+  })();
 </script>
 
 </body>
