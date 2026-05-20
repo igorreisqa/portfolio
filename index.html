@@ -1629,6 +1629,75 @@ footer {
       if (e.ctrlKey && e.keyCode === 83) { e.preventDefault(); return false; }
     });
   })();
+
+  // ── 6. ANIMAÇÃO DOS NÚMEROS NOS STATS ──
+  (function() {
+    var statEls = document.querySelectorAll('.stat-n');
+    statEls.forEach(function(el) {
+      var raw = el.textContent.trim().replace(/\./g, '').replace(/,/g, '');
+      var target = parseInt(raw, 10);
+      if (isNaN(target)) return;
+      el.dataset.target = target;
+      el.textContent = '0';
+      var done = false;
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (!entry.isIntersecting || done) return;
+          done = true;
+          obs.disconnect();
+          var startTime = null;
+          var duration = 1400;
+          function step(ts) {
+            if (!startTime) startTime = ts;
+            var p = Math.min((ts - startTime) / duration, 1);
+            var eased = 1 - Math.pow(1 - p, 3);
+            var cur = Math.round(target * eased);
+            el.textContent = cur.toLocaleString('pt-BR');
+            if (p < 1) requestAnimationFrame(step);
+            else el.textContent = target.toLocaleString('pt-BR');
+          }
+          requestAnimationFrame(step);
+        });
+      }, { threshold: 0.4 });
+      obs.observe(el);
+    });
+  })();
+
+  // ── 7. COPY-TO-CLIPBOARD NOS CONTATOS ──
+  (function() {
+    function showToast(msg) {
+      var t = document.createElement('div');
+      t.textContent = msg;
+      t.style.cssText = 'position:fixed;bottom:70px;left:50%;transform:translateX(-50%);background:#10b981;color:#fff;padding:8px 22px;border-radius:20px;font-size:0.82rem;font-weight:600;z-index:99999;pointer-events:none;transition:opacity 0.4s;white-space:nowrap;';
+      document.body.appendChild(t);
+      setTimeout(function() { t.style.opacity = '0'; }, 1600);
+      setTimeout(function() { if (t.parentNode) t.remove(); }, 2100);
+    }
+    var email = document.querySelector('.contato-link[aria-label="Enviar e-mail"]');
+    var phone = document.querySelector('.contato-link[aria-label="Ligar"]');
+    if (email) {
+      email.addEventListener('click', function() {
+        navigator.clipboard && navigator.clipboard.writeText('igorreis89@gmail.com').catch(function(){});
+        showToast('✓ E-mail copiado!');
+      });
+    }
+    if (phone) {
+      phone.addEventListener('click', function() {
+        navigator.clipboard && navigator.clipboard.writeText('(67) 99140-9831').catch(function(){});
+        showToast('✓ Telefone copiado!');
+      });
+    }
+  })();
+
+  // ── 8. MICRO-INTERAÇÃO — SETA ANIMADA NOS BOTÕES ──
+  (function() {
+    var style = document.createElement('style');
+    style.textContent = '.btn-arr{display:inline-block;transition:transform 0.22s cubic-bezier(.34,1.56,.64,1);}.btn-primary:hover .btn-arr{transform:translateX(5px);}.btn-secondary:hover .btn-arr{transform:translateX(4px);}';
+    document.head.appendChild(style);
+    document.querySelectorAll('.btn-primary, .btn-secondary').forEach(function(btn) {
+      btn.innerHTML = btn.innerHTML.replace(/→/g, '<span class="btn-arr">→</span>');
+    });
+  })();
 </script>
 
 </body>
