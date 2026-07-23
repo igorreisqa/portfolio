@@ -1502,6 +1502,22 @@ footer {
           <div class="tl-desc">Adicionei uma aba que registra cada cirurgia, coleta prioritária e ficha OPME cadastrada, com o nome de quem lançou e o horário exato — rastreabilidade que já aplico na minha rotina de compras hospitalares, agora dentro do próprio sistema.</div>
         </div>
       </div>
+      <div class="tl-item">
+        <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+        <div class="tl-content">
+          <div class="tl-date">Jul 2026</div>
+          <div class="tl-title">Novo status "Aguardando Ficha OPME": 6 fluxos duplicados fazendo a mesma coisa</div>
+          <div class="tl-desc">Precisava inserir uma pergunta ("a ficha já foi entregue ao estoque?") em todo lugar que confirma a retirada de material. O que parecia um ajuste simples virou uma investigação: buscando pelo texto exato da pergunta original, encontrei 6 funções diferentes e independentes fazendo essa mesma confirmação, espalhadas pelo sistema — cada uma precisou do mesmo ajuste, uma por uma, pra garantir que nenhum caminho escapasse do novo status.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+        <div class="tl-content">
+          <div class="tl-date">Jul 2026</div>
+          <div class="tl-title">Campo com asterisco não é garantia de obrigatório</div>
+          <div class="tl-desc">Revisando o formulário de lançamento, encontrei campos marcados com * (convênio, nome do paciente) que passavam a impressão de obrigatórios, mas não tinham nenhuma validação real por trás — dava pra salvar em branco mesmo assim. Fechei essa lacuna entre o que a tela promete e o que o código realmente impede, e repliquei a mesma checagem em Nota Fiscal, valor e data de emissão.</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
