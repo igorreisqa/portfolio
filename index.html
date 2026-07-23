@@ -1076,10 +1076,11 @@ footer {
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#experiencia">Experiência</a></li>
     <li><a href="#projetos">Projeto</a></li>
+    <li><a href="#atualizacoes">Atualizações</a></li>
     <li><a href="#stack">Competências</a></li>
     <li><a href="#processo">Abordagem</a></li>
     <li><a href="#contato">Contato</a></li>
-    <li><a href="https://monitorcirurgico-demo.vercel.app/" target="_blank" rel="noopener noreferrer" class="nav-cta">Ver demo →</a></li>
+    <li><a href="https://igorreisqa.github.io/monitorcirurgico-demo/" target="_blank" rel="noopener noreferrer" class="nav-cta">Ver demo →</a></li>
   </ul>
   <button class="nav-hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
     <span></span><span></span><span></span>
@@ -1090,10 +1091,11 @@ footer {
   <a href="#sobre" class="mob-link">Sobre</a>
   <a href="#experiencia" class="mob-link">Experiência</a>
   <a href="#projetos" class="mob-link">Projeto</a>
+  <a href="#atualizacoes" class="mob-link">Atualizações</a>
   <a href="#stack" class="mob-link">Competências</a>
   <a href="#processo" class="mob-link">Abordagem</a>
   <a href="#contato" class="mob-link">Contato</a>
-  <a href="https://monitorcirurgico-demo.vercel.app/" target="_blank" rel="noopener noreferrer" class="mob-link">Ver demo →</a>
+  <a href="https://igorreisqa.github.io/monitorcirurgico-demo/" target="_blank" rel="noopener noreferrer" class="mob-link">Ver demo →</a>
 </nav>
 
 <!-- HERO -->
@@ -1113,7 +1115,7 @@ footer {
       Sou <strong>Igor Reis</strong>, de <strong>Campo Grande/MS</strong>. Depois de 15+ anos em logística hospitalar e varejo, validando ERPs, testando fluxos e garantindo conformidade ANVISA todos os dias, estou em transição para atuar formalmente como <strong>Analista de QA</strong>. Faço UAT no dia a dia e construí meu próprio projeto de software para aplicar essa mentalidade na prática.
     </p>
     <div class="hero-actions">
-      <a href="https://monitorcirurgico-demo.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-primary">Ver demonstração ao vivo →</a>
+      <a href="https://igorreisqa.github.io/monitorcirurgico-demo/" target="_blank" rel="noopener noreferrer" class="btn-primary">Ver demonstração ao vivo →</a>
       <a href="#projetos" class="btn-secondary">Como foi construído</a>
       <a href="#contato" class="btn-secondary">Entrar em contato</a>
     </div>
@@ -1404,7 +1406,7 @@ footer {
         <div class="proj-badge">Em produção · Tempo real</div>
         <div class="proj-title">Monitor Cirúrgico</div>
         <p class="proj-desc">Um sistema operacional em tempo real que construí sozinho pra resolver um problema real de logística: acompanhar status, documentos e prazos de procedimentos com múltiplos usuários, sem depender de planilha solta. Começou como dois sistemas separados, um por unidade, e evoluiu pra um único app que atende as duas cidades, com um modo consolidado que junta os dados das duas numa visão só, sem misturar o que é de uma com o que é da outra. Não é um projeto de portfólio só para "mostrar que sei programar", é onde eu aplico, na prática, a mesma mentalidade analítica que quero levar para QA: testar fluxos, achar inconsistência, corrigir e confirmar que ficou certo.</p>
-        <a href="https://monitorcirurgico-demo.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="margin-top:20px;">Testar a demonstração ao vivo →</a>
+        <a href="https://igorreisqa.github.io/monitorcirurgico-demo/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="margin-top:20px;">Testar a demonstração ao vivo →</a>
       </div>
       <div class="proj-meta">
         <div class="meta-item">
@@ -1453,7 +1455,53 @@ footer {
         <span class="tech-pill">Importação de PDF</span>
         <span class="tech-pill">Testes manuais &amp; UAT</span>
       </div>
-      <a href="https://monitorcirurgico-demo.vercel.app/" target="_blank" rel="noopener noreferrer" class="proj-live" style="text-decoration:none;">ver demonstração ao vivo →</a>
+      <a href="https://igorreisqa.github.io/monitorcirurgico-demo/" target="_blank" rel="noopener noreferrer" class="proj-live" style="text-decoration:none;">ver demonstração ao vivo →</a>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ATUALIZAÇÕES RECENTES -->
+<div class="section" id="atualizacoes">
+  <div class="s-label">// changelog</div>
+  <h2 class="s-title">O projeto continua evoluindo,<br><em>não é uma entrega parada no tempo.</em></h2>
+
+  <div class="timeline">
+    <div class="tl-header">// últimas entregas no Monitor Cirúrgico</div>
+    <div class="tl-items">
+      <div class="tl-item">
+        <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+        <div class="tl-content">
+          <div class="tl-date">Jul 2026</div>
+          <div class="tl-title">Unificação das duas unidades num app só, com modo Consolidado</div>
+          <div class="tl-desc">Campo Grande e Cuiabá eram dois sistemas separados, cada um com seu próprio código e banco de dados. Migrei os dois pra um único app, mantendo cada cidade com seu banco independente, e criei um modo "Consolidado" que junta as duas visões sem misturar os dados — a parte mais arriscada do trabalho, já que uma escrita roteada errado significa registro indo parar no banco da cidade errada.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+        <div class="tl-content">
+          <div class="tl-date">Jul 2026</div>
+          <div class="tl-title">Bug real de dado duplicado entre cidades: achado, investigado e corrigido</div>
+          <div class="tl-desc">Consultando os dois bancos diretamente, encontrei registros de Campo Grande salvos por engano dentro do banco de Cuiabá (resultado de uma restauração de backup na unidade errada, antes da unificação). Confirmei que os dados corretos continuavam intactos na unidade certa antes de remover as cópias indevidas.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+        <div class="tl-content">
+          <div class="tl-date">Jul 2026</div>
+          <div class="tl-title">Auditoria automática de duplicatas entre filiais</div>
+          <div class="tl-desc">Depois de encontrar aquele bug manualmente, criei uma verificação própria no sistema (só leitura, sem apagar nada sozinha) que compara os dois bancos e sinaliza registros com a filial errada ou a mesma nota fiscal duplicada nas duas cidades — pra não depender de alguém notar na tela.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+        <div class="tl-content">
+          <div class="tl-date">Jul 2026</div>
+          <div class="tl-title">Log de atividade: quem lançou o quê, e quando</div>
+          <div class="tl-desc">Adicionei uma aba que registra cada cirurgia, coleta prioritária e ficha OPME cadastrada, com o nome de quem lançou e o horário exato — rastreabilidade que já aplico na minha rotina de compras hospitalares, agora dentro do próprio sistema.</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
