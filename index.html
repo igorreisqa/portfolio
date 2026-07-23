@@ -1403,7 +1403,7 @@ footer {
       <div>
         <div class="proj-badge">Em produção · Tempo real</div>
         <div class="proj-title">Monitor Cirúrgico</div>
-        <p class="proj-desc">Um sistema operacional em tempo real que construí sozinho pra resolver um problema real de logística: acompanhar status, documentos e prazos de procedimentos com múltiplos usuários, sem depender de planilha solta. Hoje é usado diariamente por duas unidades. Não é um projeto de portfólio só para "mostrar que sei programar", é onde eu aplico, na prática, a mesma mentalidade analítica que quero levar para QA: testar fluxos, achar inconsistência, corrigir e confirmar que ficou certo.</p>
+        <p class="proj-desc">Um sistema operacional em tempo real que construí sozinho pra resolver um problema real de logística: acompanhar status, documentos e prazos de procedimentos com múltiplos usuários, sem depender de planilha solta. Começou como dois sistemas separados, um por unidade, e evoluiu pra um único app que atende as duas cidades, com um modo consolidado que junta os dados das duas numa visão só, sem misturar o que é de uma com o que é da outra. Não é um projeto de portfólio só para "mostrar que sei programar", é onde eu aplico, na prática, a mesma mentalidade analítica que quero levar para QA: testar fluxos, achar inconsistência, corrigir e confirmar que ficou certo.</p>
         <a href="https://gfmedical.vercel.app/?demo=1" target="_blank" rel="noopener noreferrer" class="btn-primary" style="margin-top:20px;">Testar a demonstração ao vivo →</a>
       </div>
       <div class="proj-meta">
@@ -1439,6 +1439,7 @@ footer {
         <div class="story-quote">"</div>
         <p>Construir o Monitor Cirúrgico me colocou nos dois lados ao mesmo tempo: quem constrói o sistema e quem depende dele todos os dias. Isso me obrigou a testar de verdade, não só "clicar pra ver se abre", mas validar regra de negócio, checar permissão de acesso por papel de usuário e confirmar que um dado sensível está mascarado do jeito certo antes de mostrar pra alguém de fora.</p>
         <p>Ao longo do desenvolvimento, encontrei e corrigi bugs reais de autenticação, controle de acesso e importação automática de PDF, aplicando a mesma reprodução e documentação de bugs que faço hoje na minha rotina profissional, só que aplicada ao próprio código.</p>
+        <p>Unificar as duas unidades no modo consolidado foi o teste mais exigente do projeto: cada cidade tem seu próprio banco de dados, então uma escrita roteada errado significa registro de paciente indo parar no lugar errado. Consultando o banco diretamente, encontrei um caso real de dado duplicado entre as duas cidades (uma restauração de backup feita na unidade errada) — investiguei a causa, corrigi o roteamento de escrita e confirmei, registro por registro, que cada cidade só grava no próprio banco antes de considerar a função pronta pra dado real.</p>
         <p>A arquitetura (JavaScript, PostgreSQL via Supabase, autenticação e políticas de segurança em nível de linha) é só o meio. O que importa aqui é o processo: entender o fluxo real de uso, testar, quebrar, corrigir e confirmar, em qualquer sistema, de qualquer área.</p>
       </div>
     </div>
