@@ -1073,14 +1073,20 @@ footer {
     Igor Reis · QA
   </a>
   <ul class="nav-links">
-    <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#experiencia">Experiência</a></li>
-    <li><a href="#projetos">Projeto</a></li>
-    <li><a href="#atualizacoes">Atualizações</a></li>
-    <li><a href="#stack">Competências</a></li>
-    <li><a href="#processo">Abordagem</a></li>
-    <li><a href="#contato">Contato</a></li>
-    <li><a href="https://igorreisqa.github.io/monitorcirurgico-demo/" target="_blank" rel="noopener noreferrer" class="nav-cta">Ver demo →</a></li>
+    <li><a href="#sobre" data-i18n="navSobre">Sobre</a></li>
+    <li><a href="#experiencia" data-i18n="navExperiencia">Experiência</a></li>
+    <li><a href="#projetos" data-i18n="navProjeto">Projeto</a></li>
+    <li><a href="#atualizacoes" data-i18n="navAtualizacoes">Atualizações</a></li>
+    <li><a href="#stack" data-i18n="navStack">Competências</a></li>
+    <li><a href="#processo" data-i18n="navProcesso">Abordagem</a></li>
+    <li><a href="#contato" data-i18n="navContato">Contato</a></li>
+    <li><a href="https://igorreisqa.github.io/monitorcirurgico-demo/" target="_blank" rel="noopener noreferrer" class="nav-cta" data-i18n="navCta">Ver demo →</a></li>
+    <li><select id="langSwitch" aria-label="Idioma / Language" style="margin-left:6px;background:var(--card3);border:1px solid var(--border);border-radius:7px;padding:5px 8px;font-size:0.78rem;font-family:'Fira Code',monospace;color:var(--text);cursor:pointer;">
+      <option value="pt-BR">🇧🇷 PT-BR</option>
+      <option value="pt-PT">🇵🇹 PT-PT</option>
+      <option value="es">🇪🇸 ES</option>
+      <option value="en">🇬🇧 EN</option>
+    </select></li>
   </ul>
   <button class="nav-hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
     <span></span><span></span><span></span>
@@ -1088,14 +1094,20 @@ footer {
 </nav>
 
 <nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile">
-  <a href="#sobre" class="mob-link">Sobre</a>
-  <a href="#experiencia" class="mob-link">Experiência</a>
-  <a href="#projetos" class="mob-link">Projeto</a>
-  <a href="#atualizacoes" class="mob-link">Atualizações</a>
-  <a href="#stack" class="mob-link">Competências</a>
-  <a href="#processo" class="mob-link">Abordagem</a>
-  <a href="#contato" class="mob-link">Contato</a>
-  <a href="https://igorreisqa.github.io/monitorcirurgico-demo/" target="_blank" rel="noopener noreferrer" class="mob-link">Ver demo →</a>
+  <a href="#sobre" class="mob-link" data-i18n="navSobre">Sobre</a>
+  <a href="#experiencia" class="mob-link" data-i18n="navExperiencia">Experiência</a>
+  <a href="#projetos" class="mob-link" data-i18n="navProjeto">Projeto</a>
+  <a href="#atualizacoes" class="mob-link" data-i18n="navAtualizacoes">Atualizações</a>
+  <a href="#stack" class="mob-link" data-i18n="navStack">Competências</a>
+  <a href="#processo" class="mob-link" data-i18n="navProcesso">Abordagem</a>
+  <a href="#contato" class="mob-link" data-i18n="navContato">Contato</a>
+  <a href="https://igorreisqa.github.io/monitorcirurgico-demo/" target="_blank" rel="noopener noreferrer" class="mob-link" data-i18n="navCta">Ver demo →</a>
+  <select id="langSwitchMobile" aria-label="Idioma / Language" style="margin-top:10px;background:var(--card3);border:1px solid var(--border);border-radius:7px;padding:9px 10px;font-size:0.85rem;font-family:'Fira Code',monospace;color:var(--text);">
+    <option value="pt-BR">🇧🇷 Português (Brasil)</option>
+    <option value="pt-PT">🇵🇹 Português (Portugal)</option>
+    <option value="es">🇪🇸 Español</option>
+    <option value="en">🇬🇧 English</option>
+  </select>
 </nav>
 
 <!-- HERO -->
@@ -1104,20 +1116,20 @@ footer {
   <div class="hero-left">
     <div class="hero-eyebrow">
       <span class="eyebrow-dot"></span>
-      Em transição de carreira para QA
+      <span data-i18n="heroEyebrow">Em transição de carreira para QA</span>
     </div>
-    <h1>
+    <h1 data-i18n="heroH1">
       15+ anos validando<br>
       <span class="accent">processos e sistemas</span><br>
       <span class="dim">na prática. Agora, em QA.</span>
     </h1>
-    <p class="hero-desc">
+    <p class="hero-desc" data-i18n="heroDesc">
       Sou <strong>Igor Reis</strong>, de <strong>Campo Grande/MS</strong>. Depois de 15+ anos em logística hospitalar e varejo, validando ERPs, testando fluxos e garantindo conformidade ANVISA todos os dias, estou em transição para atuar formalmente como <strong>Analista de QA</strong>. Faço UAT no dia a dia e construí meu próprio projeto de software para aplicar essa mentalidade na prática.
     </p>
     <div class="hero-actions">
-      <a href="https://igorreisqa.github.io/monitorcirurgico-demo/" target="_blank" rel="noopener noreferrer" class="btn-primary">Ver demonstração ao vivo →</a>
-      <a href="#projetos" class="btn-secondary">Como foi construído</a>
-      <a href="#contato" class="btn-secondary">Entrar em contato</a>
+      <a href="https://igorreisqa.github.io/monitorcirurgico-demo/" target="_blank" rel="noopener noreferrer" class="btn-primary" data-i18n="heroBtnDemo">Ver demonstração ao vivo →</a>
+      <a href="#projetos" class="btn-secondary" data-i18n="heroBtnBuilt">Como foi construído</a>
+      <a href="#contato" class="btn-secondary" data-i18n="heroBtnContact">Entrar em contato</a>
     </div>
   </div>
 
@@ -1129,59 +1141,59 @@ footer {
           <div class="id-avatar">🔎</div>
           <div class="id-info">
             <div class="id-name">Igor Reis</div>
-            <div class="id-role">QA · Analista de Testes (em transição)</div>
+            <div class="id-role" data-i18n="idRole">QA · Analista de Testes (em transição)</div>
           </div>
-          <div class="id-badge">EM TRANSIÇÃO</div>
+          <div class="id-badge" data-i18n="idBadge">EM TRANSIÇÃO</div>
         </div>
         <div class="id-rows">
           <div class="id-row">
-            <span class="id-row-label">experiência</span>
-            <span class="id-row-value">15+ anos em logística</span>
+            <span class="id-row-label" data-i18n="idLabelExp">experiência</span>
+            <span class="id-row-value" data-i18n="idValueExp">15+ anos em logística</span>
           </div>
           <div class="id-row">
-            <span class="id-row-label">competências</span>
-            <span class="id-row-value green">UAT · Requisitos · Testes manuais</span>
+            <span class="id-row-label" data-i18n="idLabelComp">competências</span>
+            <span class="id-row-value green" data-i18n="idValueComp">UAT · Requisitos · Testes manuais</span>
           </div>
           <div class="id-row">
-            <span class="id-row-label">domínio</span>
-            <span class="id-row-value green">Hospitalar (ANVISA) &amp; Varejo</span>
+            <span class="id-row-label" data-i18n="idLabelDominio">domínio</span>
+            <span class="id-row-value green" data-i18n="idValueDominio">Hospitalar (ANVISA) &amp; Varejo</span>
           </div>
           <div class="id-row">
-            <span class="id-row-label">projeto pessoal</span>
-            <span class="id-row-value green">PWA em produção</span>
+            <span class="id-row-label" data-i18n="idLabelProjeto">projeto pessoal</span>
+            <span class="id-row-value green" data-i18n="idValueProjeto">PWA em produção</span>
           </div>
           <div class="id-row">
-            <span class="id-row-label">graduação</span>
-            <span class="id-row-value">Bacharel em C. Contábeis</span>
+            <span class="id-row-label" data-i18n="idLabelGraduacao">graduação</span>
+            <span class="id-row-value" data-i18n="idValueGraduacao">Bacharel em C. Contábeis</span>
           </div>
           <div class="id-row">
-            <span class="id-row-label">pós · 2025</span>
-            <span class="id-row-value" style="font-size:0.72rem">BI, Big Data &amp; Analytics</span>
+            <span class="id-row-label" data-i18n="idLabelPos2025">pós · 2025</span>
+            <span class="id-row-value" style="font-size:0.72rem" data-i18n="idValuePos2025">BI, Big Data &amp; Analytics</span>
           </div>
           <div class="id-row">
-            <span class="id-row-label">pós · 2024</span>
-            <span class="id-row-value" style="font-size:0.72rem">MBA em Logística e Supply Chain</span>
+            <span class="id-row-label" data-i18n="idLabelPos2024">pós · 2024</span>
+            <span class="id-row-value" style="font-size:0.72rem" data-i18n="idValuePos2024">MBA em Logística e Supply Chain</span>
           </div>
           <div class="id-row">
-            <span class="id-row-label">pós · 2020</span>
-            <span class="id-row-value" style="font-size:0.72rem">Gestão de Logística Empresarial</span>
+            <span class="id-row-label" data-i18n="idLabelPos2020">pós · 2020</span>
+            <span class="id-row-value" style="font-size:0.72rem" data-i18n="idValuePos2020">Gestão de Logística Empresarial</span>
           </div>
           <div class="id-row">
-            <span class="id-row-label">pós · 2018</span>
-            <span class="id-row-value" style="font-size:0.72rem">Direito Tributário</span>
+            <span class="id-row-label" data-i18n="idLabelPos2018">pós · 2018</span>
+            <span class="id-row-value" style="font-size:0.72rem" data-i18n="idValuePos2018">Direito Tributário</span>
           </div>
           <div class="id-row">
-            <span class="id-row-label">cursando</span>
-            <span class="id-row-value" style="font-size:0.72rem">Análise e Desenvolvimento de Sistemas</span>
+            <span class="id-row-label" data-i18n="idLabelCursando">cursando</span>
+            <span class="id-row-value" style="font-size:0.72rem" data-i18n="idValueCursando">Análise e Desenvolvimento de Sistemas</span>
           </div>
         </div>
         <div class="id-stack">
           <span class="id-tag">UAT</span>
-          <span class="id-tag">Testes manuais</span>
-          <span class="id-tag">Documentação e reporte de bugs</span>
+          <span class="id-tag" data-i18n="tagTestesManuais">Testes manuais</span>
+          <span class="id-tag" data-i18n="tagDocBugs">Documentação e reporte de bugs</span>
           <span class="id-tag">ANVISA</span>
-          <span class="id-tag">Sistema ERP</span>
-          <span class="id-tag">Automação (em estudo)</span>
+          <span class="id-tag" data-i18n="tagSistemaErp">Sistema ERP</span>
+          <span class="id-tag" data-i18n="tagAutomacao">Automação (em estudo)</span>
         </div>
       </div>
     </div>
@@ -1192,86 +1204,89 @@ footer {
 <div class="stats-bar">
   <div class="stat">
     <div class="stat-n">15</div>
-    <div class="stat-l">Anos de<br>experiência em logística</div>
+    <div class="stat-l" data-i18n="stat1">Anos de<br>experiência em logística</div>
   </div>
   <div class="stat">
     <div class="stat-n">8</div>
-    <div class="stat-l">Anos em logística<br>hospitalar (ANVISA)</div>
+    <div class="stat-l" data-i18n="stat2">Anos em logística<br>hospitalar (ANVISA)</div>
   </div>
   <div class="stat">
     <div class="stat-n">1</div>
-    <div class="stat-l">PWA pessoal<br>em produção</div>
+    <div class="stat-l" data-i18n="stat3">PWA pessoal<br>em produção</div>
   </div>
   <div class="stat">
     <div class="stat-n">2</div>
-    <div class="stat-l">Unidades usando<br>o sistema (CGR e CBA)</div>
+    <div class="stat-l" data-i18n="stat4">Unidades usando<br>o sistema (CGR e CBA)</div>
   </div>
 </div>
 
 <!-- SOBRE -->
 <div class="section" id="sobre">
-  <div class="s-label">// sobre mim</div>
-  <h2 class="s-title">Validar sistemas na prática,<br><em>agora com nome: QA.</em></h2>
+  <div class="s-label" data-i18n="sobreLabel">// sobre mim</div>
+  <h2 class="s-title" data-i18n="sobreTitle">Validar sistemas na prática,<br><em>agora com nome: QA.</em></h2>
   <div class="sobre-layout">
     <div class="sobre-body">
-      <p>Estou em <strong>transição de carreira para atuar como Analista de QA</strong>. Ainda não tenho experiência profissional formal na área, mas venho me dedicando de forma consistente a essa mudança: estudo na <strong>QA Academy da Qazando</strong>, curso Análise e Desenvolvimento de Sistemas, e pratico o que aprendo em projetos reais.</p>
-      <p>Antes disso, construí mais de <strong>15 anos de trajetória em logística</strong>: 7 anos em varejo e 8 anos em logística hospitalar, com compras, gestão de estoques e materiais consignados, sempre em ambientes com exigência rígida de conformidade regulatória (<strong>ANVISA</strong>), rastreabilidade e controle de qualidade.</p>
-      <p>No dia a dia, realizo testes manuais, incluindo <strong>testes de aceitação (UAT)</strong>: atuo como cliente final dos sistemas que utilizo, validando pessoalmente cada fluxo e funcionalidade antes de aprovar novas versões e ajustes, sob a perspectiva de quem vai usar o sistema no dia a dia. Já participei diretamente da validação em processos de migração entre sistemas ERP, uma prática que se conecta diretamente com o trabalho de QA.</p>
-      <p>Quando encontro um erro na rotina, gravo vídeo do fluxo e abro um chamado para o suporte do sistema corrigir, aplicando na prática a reprodução e documentação de bugs.</p>
+      <p data-i18n="sobreP1">Estou em <strong>transição de carreira para atuar como Analista de QA</strong>. Ainda não tenho experiência profissional formal na área, mas venho me dedicando de forma consistente a essa mudança: estudo na <strong>QA Academy da Qazando</strong>, curso Análise e Desenvolvimento de Sistemas, e pratico o que aprendo em projetos reais.</p>
+      <p data-i18n="sobreP2">Antes disso, construí mais de <strong>15 anos de trajetória em logística</strong>: 7 anos em varejo e 8 anos em logística hospitalar, com compras, gestão de estoques e materiais consignados, sempre em ambientes com exigência rígida de conformidade regulatória (<strong>ANVISA</strong>), rastreabilidade e controle de qualidade.</p>
+      <p data-i18n="sobreP3">No dia a dia, realizo testes manuais, incluindo <strong>testes de aceitação (UAT)</strong>: atuo como cliente final dos sistemas que utilizo, validando pessoalmente cada fluxo e funcionalidade antes de aprovar novas versões e ajustes, sob a perspectiva de quem vai usar o sistema no dia a dia. Já participei diretamente da validação em processos de migração entre sistemas ERP, uma prática que se conecta diretamente com o trabalho de QA.</p>
+      <p data-i18n="sobreP4">Quando encontro um erro na rotina, gravo vídeo do fluxo e abro um chamado para o suporte do sistema corrigir, aplicando na prática a reprodução e documentação de bugs.</p>
       <div class="highlight-box">
-        <h4>// meu diferencial</h4>
-        <p>Não venho de um bootcamp sem contexto de negócio. Venho de 15 anos vendo o que acontece quando um sistema falha na prática: ruptura de estoque, material vencido, retrabalho, não conformidade. É essa mentalidade analítica, testada em ambiente real, que quero levar para QA.</p>
+        <h4 data-i18n="diferencialH4">// meu diferencial</h4>
+        <p data-i18n="diferencialP">Não venho de um bootcamp sem contexto de negócio. Venho de 15 anos vendo o que acontece quando um sistema falha na prática: ruptura de estoque, material vencido, retrabalho, não conformidade. É essa mentalidade analítica, testada em ambiente real, que quero levar para QA.</p>
       </div>
     </div>
-    <div class="formacao-stack">
+    <div>
+      <div class="skill-group-label" data-i18n="formacaoLabel">// formação &amp; certificações</div>
+      <div class="formacao-stack">
       <div class="form-item">
         <div class="form-icon">🔎</div>
         <div>
-          <div class="form-title">QA Academy</div>
-          <div class="form-sub">Qazando · Em curso</div>
+          <div class="form-title" data-i18n="form1Title">QA Academy</div>
+          <div class="form-sub" data-i18n="form1Sub">Qazando · Em curso</div>
         </div>
       </div>
       <div class="form-item">
         <div class="form-icon">💻</div>
         <div>
-          <div class="form-title">Análise e Desenvolvimento de Sistemas</div>
-          <div class="form-sub">Centro Universitário FAM · 2025–2027 (cursando)</div>
+          <div class="form-title" data-i18n="form2Title">Análise e Desenvolvimento de Sistemas</div>
+          <div class="form-sub" data-i18n="form2Sub">Centro Universitário FAM · 2025–2027 (cursando)</div>
         </div>
       </div>
       <div class="form-item">
         <div class="form-icon">📊</div>
         <div>
-          <div class="form-title">Pós em Business Intelligence, Big Data &amp; Analytics</div>
-          <div class="form-sub">Anhanguera · 2025</div>
+          <div class="form-title" data-i18n="form3Title">Pós em Business Intelligence, Big Data &amp; Analytics</div>
+          <div class="form-sub" data-i18n="form3Sub">Anhanguera · 2025</div>
         </div>
       </div>
       <div class="form-item">
         <div class="form-icon">📦</div>
         <div>
-          <div class="form-title">MBA em Logística e Supply Chain Management</div>
-          <div class="form-sub">Anhanguera · 2024</div>
+          <div class="form-title" data-i18n="form4Title">MBA em Logística e Supply Chain Management</div>
+          <div class="form-sub" data-i18n="form4Sub">Anhanguera · 2024</div>
         </div>
       </div>
       <div class="form-item">
         <div class="form-icon">🚚</div>
         <div>
-          <div class="form-title">Pós em Gestão de Logística e Gestão Empresarial</div>
-          <div class="form-sub">Faculdade Batista de Minas Gerais · 2020–2021</div>
+          <div class="form-title" data-i18n="form5Title">Pós em Gestão de Logística e Gestão Empresarial</div>
+          <div class="form-sub" data-i18n="form5Sub">Faculdade Batista de Minas Gerais · 2020–2021</div>
         </div>
       </div>
       <div class="form-item">
         <div class="form-icon">⚖️</div>
         <div>
-          <div class="form-title">Pós em Direito Tributário</div>
-          <div class="form-sub">Anhanguera · 2017–2018</div>
+          <div class="form-title" data-i18n="form6Title">Pós em Direito Tributário</div>
+          <div class="form-sub" data-i18n="form6Sub">Anhanguera · 2017–2018</div>
         </div>
       </div>
       <div class="form-item">
         <div class="form-icon">🎓</div>
         <div>
-          <div class="form-title">Graduação em Ciências Contábeis</div>
-          <div class="form-sub">Formação de base</div>
+          <div class="form-title" data-i18n="form7Title">Graduação em Ciências Contábeis</div>
+          <div class="form-sub" data-i18n="form7Sub">Formação de base</div>
         </div>
+      </div>
       </div>
     </div>
   </div>
@@ -1281,96 +1296,96 @@ footer {
 
 <!-- EXPERIENCIA -->
 <div class="section" id="experiencia">
-  <div class="s-label">// experiência profissional</div>
-  <h2 class="s-title">15 anos de operação,<br><em>testando na prática antes de ser QA.</em></h2>
+  <div class="s-label" data-i18n="expLabel">// experiência profissional</div>
+  <h2 class="s-title" data-i18n="expTitle">15 anos de operação,<br><em>testando na prática antes de ser QA.</em></h2>
 
   <div class="projeto-wrapper">
     <div class="projeto-header-bar"></div>
 
     <div class="projeto-top">
       <div>
-        <div class="proj-badge">Trajetória · 2010 – atual</div>
-        <div class="proj-title">Logística, compras e validação de sistemas</div>
-        <p class="proj-desc">Da auditoria contábil à gestão de compras hospitalares, sempre em funções que exigem atenção a detalhes, rastreabilidade e conformidade com regras rígidas.</p>
+        <div class="proj-badge" data-i18n="expBadge">Trajetória · 2010 – atual</div>
+        <div class="proj-title" data-i18n="expProjTitle">Logística, compras e validação de sistemas</div>
+        <p class="proj-desc" data-i18n="expProjDesc">Da auditoria contábil à gestão de compras hospitalares, sempre em funções que exigem atenção a detalhes, rastreabilidade e conformidade com regras rígidas.</p>
       </div>
       <div class="proj-meta">
         <div class="meta-item">
           <div class="meta-val">UAT</div>
-          <div class="meta-label">Prática diária</div>
+          <div class="meta-label" data-i18n="expMeta1">Prática diária</div>
         </div>
         <div class="meta-item">
           <div class="meta-val">ANVISA</div>
-          <div class="meta-label">Conformidade</div>
+          <div class="meta-label" data-i18n="expMeta2">Conformidade</div>
         </div>
         <div class="meta-item">
           <div class="meta-val">OPME</div>
-          <div class="meta-label">Materiais consignados</div>
+          <div class="meta-label" data-i18n="expMeta3">Materiais consignados</div>
         </div>
         <div class="meta-item">
           <div class="meta-val">ERP</div>
-          <div class="meta-label">Migração de ERP</div>
+          <div class="meta-label" data-i18n="expMeta4">Migração de ERP</div>
         </div>
       </div>
     </div>
 
     <div class="proj-story">
-      <div class="proj-story-label">// migração de sistema, na prática</div>
+      <div class="proj-story-label" data-i18n="expStoryLabel">// migração de sistema, na prática</div>
       <div class="story-card">
         <div class="story-quote">"</div>
-        <p>Já participei diretamente da validação em processos de <strong>migração entre sistemas ERP</strong>: testando fluxos, comparando comportamento entre as versões e aprovando o que estava pronto para uso, uma prática que se conecta diretamente com o trabalho de QA.</p>
+        <p data-i18n="expStoryP">Já participei diretamente da validação em processos de <strong>migração entre sistemas ERP</strong>: testando fluxos, comparando comportamento entre as versões e aprovando o que estava pronto para uso, uma prática que se conecta diretamente com o trabalho de QA.</p>
       </div>
     </div>
 
     <div style="padding: 0 44px 40px; margin-top: 12px;">
       <div class="timeline">
-        <div class="tl-header">// linha do tempo profissional</div>
+        <div class="tl-header" data-i18n="expTlHeader">// linha do tempo profissional</div>
         <div class="tl-items">
           <div class="tl-item">
             <div class="tl-dot"><div class="tl-dot-inner"></div></div>
             <div class="tl-content">
-              <div class="tl-date">Ago 2022 - atual (4 anos)</div>
-              <div class="tl-title">Analista Administrativo · GF Medical Comércio e Representações</div>
-              <div class="tl-desc">Realização de testes manuais e testes de aceitação (UAT) em sistemas ERP, validando processos e fluxos, e identificando e reportando inconsistências operacionais antes da aprovação de novas versões, incluindo migração de sistema ERP. Relatórios gerenciais com base em KPIs logísticos (giro de estoque, ruptura, tempo de reposição). Gestão de compras hospitalares, estoques e materiais consignados (OPMEs), com foco em rastreabilidade, controle de validade e conformidade ANVISA. Coordenação da logística de almoxarifado, farmácia e centro cirúrgico, incluindo transporte de urgência para materiais críticos. Liderança de equipes operacionais e administrativas de logística e suprimentos, com relacionamento e negociação junto a fornecedores.</div>
+              <div class="tl-date" data-i18n="tl1Date">Ago 2022 - atual (4 anos)</div>
+              <div class="tl-title" data-i18n="tl1Title">Analista Administrativo · GF Medical Comércio e Representações</div>
+              <div class="tl-desc" data-i18n="tl1Desc">Realização de testes manuais e testes de aceitação (UAT) em sistemas ERP, validando processos e fluxos, e identificando e reportando inconsistências operacionais antes da aprovação de novas versões, incluindo migração de sistema ERP. Relatórios gerenciais com base em KPIs logísticos (giro de estoque, ruptura, tempo de reposição). Gestão de compras hospitalares, estoques e materiais consignados (OPMEs), com foco em rastreabilidade, controle de validade e conformidade ANVISA. Coordenação da logística de almoxarifado, farmácia e centro cirúrgico, incluindo transporte de urgência para materiais críticos. Liderança de equipes operacionais e administrativas de logística e suprimentos, com relacionamento e negociação junto a fornecedores.</div>
             </div>
           </div>
           <div class="tl-item">
             <div class="tl-dot"><div class="tl-dot-inner"></div></div>
             <div class="tl-content">
-              <div class="tl-date">Nov 2018 - Ago 2022 (3a 10m)</div>
-              <div class="tl-title">Assistente Administrativo · GF Medical Comércio e Representações</div>
-              <div class="tl-desc">Campo Grande, Mato Grosso do Sul.</div>
+              <div class="tl-date" data-i18n="tl2Date">Nov 2018 - Ago 2022 (3a 10m)</div>
+              <div class="tl-title" data-i18n="tl2Title">Assistente Administrativo · GF Medical Comércio e Representações</div>
+              <div class="tl-desc" data-i18n="tl2Desc">Campo Grande, Mato Grosso do Sul.</div>
             </div>
           </div>
           <div class="tl-item">
             <div class="tl-dot"><div class="tl-dot-inner"></div></div>
             <div class="tl-content">
-              <div class="tl-date">Mar 2018 - Mai 2018 (3 meses)</div>
-              <div class="tl-title">Analista Fiscal · Soldamaq</div>
-              <div class="tl-desc">Análise e conciliação de notas fiscais de entrada e saída, verificação de tributação e correção de divergências fiscais e contábeis.</div>
+              <div class="tl-date" data-i18n="tl3Date">Mar 2018 - Mai 2018 (3 meses)</div>
+              <div class="tl-title" data-i18n="tl3Title">Analista Fiscal · Soldamaq</div>
+              <div class="tl-desc" data-i18n="tl3Desc">Análise e conciliação de notas fiscais de entrada e saída, verificação de tributação e correção de divergências fiscais e contábeis.</div>
             </div>
           </div>
           <div class="tl-item">
             <div class="tl-dot"><div class="tl-dot-inner"></div></div>
             <div class="tl-content">
-              <div class="tl-date">Dez 2013 - Mar 2018 (4a 4m)</div>
-              <div class="tl-title">Assistente Administrativo · Multicoisas Franquias</div>
-              <div class="tl-desc">Análise e conciliação de notas fiscais, controle de logística reversa (recebimento, inspeção e destinação de devoluções) e participação na migração de estoque Campo Grande–Araçariguama, com uso de sistema WMS.</div>
+              <div class="tl-date" data-i18n="tl4Date">Dez 2013 - Mar 2018 (4a 4m)</div>
+              <div class="tl-title" data-i18n="tl4Title">Assistente Administrativo · Multicoisas Franquias</div>
+              <div class="tl-desc" data-i18n="tl4Desc">Análise e conciliação de notas fiscais, controle de logística reversa (recebimento, inspeção e destinação de devoluções) e participação na migração de estoque Campo Grande–Araçariguama, com uso de sistema WMS.</div>
             </div>
           </div>
           <div class="tl-item">
             <div class="tl-dot"><div class="tl-dot-inner dim"></div></div>
             <div class="tl-content">
-              <div class="tl-date">Mai 2011 - Dez 2013 (2a 8m)</div>
-              <div class="tl-title">Auxiliar Contábil · Multicoisas Franquias</div>
-              <div class="tl-desc">Escrituração fiscal, apuração de impostos e elaboração de obrigações acessórias, com suporte a relatórios e demonstrativos fiscais.</div>
+              <div class="tl-date" data-i18n="tl5Date">Mai 2011 - Dez 2013 (2a 8m)</div>
+              <div class="tl-title" data-i18n="tl5Title">Auxiliar Contábil · Multicoisas Franquias</div>
+              <div class="tl-desc" data-i18n="tl5Desc">Escrituração fiscal, apuração de impostos e elaboração de obrigações acessórias, com suporte a relatórios e demonstrativos fiscais.</div>
             </div>
           </div>
           <div class="tl-item">
             <div class="tl-dot"><div class="tl-dot-inner dim"></div></div>
             <div class="tl-content">
-              <div class="tl-date">Set 2010 - Abr 2011 (8 meses)</div>
-              <div class="tl-title">Auxiliar de Escritório · Lebarbenchon, Auditoria e Perícia Contábil</div>
-              <div class="tl-desc">Suporte a auditorias contábeis: conferência de documentos financeiros, elaboração de relatórios e revisão de controles internos.</div>
+              <div class="tl-date" data-i18n="tl6Date">Set 2010 - Abr 2011 (8 meses)</div>
+              <div class="tl-title" data-i18n="tl6Title">Auxiliar de Escritório · Lebarbenchon, Auditoria e Perícia Contábil</div>
+              <div class="tl-desc" data-i18n="tl6Desc">Suporte a auditorias contábeis: conferência de documentos financeiros, elaboração de relatórios e revisão de controles internos.</div>
             </div>
           </div>
         </div>
@@ -1383,10 +1398,10 @@ footer {
         <span class="tech-pill">UAT</span>
         <span class="tech-pill">ANVISA</span>
         <span class="tech-pill">OPME</span>
-        <span class="tech-pill">KPIs logísticos</span>
+        <span class="tech-pill" data-i18n="pillKpis">KPIs logísticos</span>
         <span class="tech-pill">WMS</span>
       </div>
-      <div class="proj-live">15+ anos · logística, compras e conformidade</div>
+      <div class="proj-live" data-i18n="expProjLive">15+ anos · logística, compras e conformidade</div>
     </div>
   </div>
 </div>
@@ -1395,54 +1410,54 @@ footer {
 
 <!-- PROJETOS -->
 <div class="section" id="projetos">
-  <div class="s-label">// projeto pessoal</div>
-  <h2 class="s-title">Não esperei virar QA<br><em>para começar a testar de verdade.</em></h2>
+  <div class="s-label" data-i18n="projLabel">// projeto pessoal</div>
+  <h2 class="s-title" data-i18n="projTitle">Não esperei virar QA<br><em>para começar a testar de verdade.</em></h2>
 
   <div class="projeto-wrapper">
     <div class="projeto-header-bar"></div>
 
     <div class="projeto-top">
       <div>
-        <div class="proj-badge">Em produção · Tempo real</div>
+        <div class="proj-badge" data-i18n="projBadge">Em produção · Tempo real</div>
         <div class="proj-title">Monitor Cirúrgico</div>
-        <p class="proj-desc">Um sistema operacional em tempo real que construí sozinho pra resolver um problema real de logística: acompanhar status, documentos e prazos de procedimentos com múltiplos usuários, sem depender de planilha solta. Começou como dois sistemas separados, um por unidade, e evoluiu pra um único app que atende as duas cidades, com um modo consolidado que junta os dados das duas numa visão só, sem misturar o que é de uma com o que é da outra. Não é um projeto de portfólio só para "mostrar que sei programar", é onde eu aplico, na prática, a mesma mentalidade analítica que quero levar para QA: testar fluxos, achar inconsistência, corrigir e confirmar que ficou certo.</p>
-        <a href="https://igorreisqa.github.io/monitorcirurgico-demo/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="margin-top:20px;">Testar a demonstração ao vivo →</a>
+        <p class="proj-desc" data-i18n="projDesc">Um sistema operacional em tempo real que construí sozinho pra resolver um problema real de logística: acompanhar status, documentos e prazos de procedimentos com múltiplos usuários, sem depender de planilha solta. Começou como dois sistemas separados, um por unidade, e evoluiu pra um único app que atende as duas cidades, com um modo consolidado que junta os dados das duas numa visão só, sem misturar o que é de uma com o que é da outra. Não é um projeto de portfólio só para "mostrar que sei programar", é onde eu aplico, na prática, a mesma mentalidade analítica que quero levar para QA: testar fluxos, achar inconsistência, corrigir e confirmar que ficou certo.</p>
+        <a href="https://igorreisqa.github.io/monitorcirurgico-demo/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="margin-top:20px;" data-i18n="projBtnDemo">Testar a demonstração ao vivo →</a>
       </div>
       <div class="proj-meta">
         <div class="meta-item">
           <div class="meta-val">2</div>
-          <div class="meta-label">Unidades em produção</div>
+          <div class="meta-label" data-i18n="projMeta1">Unidades em produção</div>
         </div>
         <div class="meta-item">
           <div class="meta-val">PWA</div>
-          <div class="meta-label">Instalável, funciona offline</div>
+          <div class="meta-label" data-i18n="projMeta2">Instalável, funciona offline</div>
         </div>
         <div class="meta-item">
           <div class="meta-val">RLS</div>
-          <div class="meta-label">Segurança por papel</div>
+          <div class="meta-label" data-i18n="projMeta3">Segurança por papel</div>
         </div>
         <div class="meta-item">
           <div class="meta-val">Real-time</div>
-          <div class="meta-label">Atualização automática</div>
+          <div class="meta-label" data-i18n="projMeta4">Atualização automática</div>
         </div>
       </div>
     </div>
 
     <div class="proj-image-wrap">
-      <div class="proj-img-label">// painel executivo, ambiente de demonstração (dados fictícios)</div>
+      <div class="proj-img-label" data-i18n="projImgLabel">// painel executivo, ambiente de demonstração (dados fictícios)</div>
       <div class="proj-img-frame">
         <img src="monitorcirurgico-demo.png" alt="Painel do Monitor Cirúrgico, ambiente de demonstração com dados fictícios" loading="lazy">
       </div>
     </div>
 
     <div class="proj-story">
-      <div class="proj-story-label">// o que esse projeto prova, na prática</div>
+      <div class="proj-story-label" data-i18n="projStoryLabel">// o que esse projeto prova, na prática</div>
       <div class="story-card">
         <div class="story-quote">"</div>
-        <p>Construir o Monitor Cirúrgico me colocou nos dois lados ao mesmo tempo: quem constrói o sistema e quem depende dele todos os dias. Isso me obrigou a testar de verdade, não só "clicar pra ver se abre", mas validar regra de negócio, checar permissão de acesso por papel de usuário e confirmar que um dado sensível está mascarado do jeito certo antes de mostrar pra alguém de fora.</p>
-        <p>Ao longo do desenvolvimento, encontrei e corrigi bugs reais de autenticação, controle de acesso e importação automática de PDF, aplicando a mesma reprodução e documentação de bugs que faço hoje na minha rotina profissional, só que aplicada ao próprio código.</p>
-        <p>Unificar as duas unidades no modo consolidado foi o teste mais exigente do projeto: cada cidade tem seu próprio banco de dados, então uma escrita roteada errado significa registro de paciente indo parar no lugar errado. Consultando o banco diretamente, encontrei um caso real de dado duplicado entre as duas cidades (uma restauração de backup feita na unidade errada) — investiguei a causa, corrigi o roteamento de escrita e confirmei, registro por registro, que cada cidade só grava no próprio banco antes de considerar a função pronta pra dado real.</p>
-        <p>A arquitetura (JavaScript, PostgreSQL via Supabase, autenticação e políticas de segurança em nível de linha) é só o meio. O que importa aqui é o processo: entender o fluxo real de uso, testar, quebrar, corrigir e confirmar, em qualquer sistema, de qualquer área.</p>
+        <p data-i18n="projStoryP1">Construir o Monitor Cirúrgico me colocou nos dois lados ao mesmo tempo: quem constrói o sistema e quem depende dele todos os dias. Isso me obrigou a testar de verdade, não só "clicar pra ver se abre", mas validar regra de negócio, checar permissão de acesso por papel de usuário e confirmar que um dado sensível está mascarado do jeito certo antes de mostrar pra alguém de fora.</p>
+        <p data-i18n="projStoryP2">Ao longo do desenvolvimento, encontrei e corrigi bugs reais de autenticação, controle de acesso e importação automática de PDF, aplicando a mesma reprodução e documentação de bugs que faço hoje na minha rotina profissional, só que aplicada ao próprio código.</p>
+        <p data-i18n="projStoryP3">Unificar as duas unidades no modo consolidado foi o teste mais exigente do projeto: cada cidade tem seu próprio banco de dados, então uma escrita roteada errado significa registro de paciente indo parar no lugar errado. Consultando o banco diretamente, encontrei um caso real de dado duplicado entre as duas cidades (uma restauração de backup feita na unidade errada) — investiguei a causa, corrigi o roteamento de escrita e confirmei, registro por registro, que cada cidade só grava no próprio banco antes de considerar a função pronta pra dado real.</p>
+        <p data-i18n="projStoryP4">A arquitetura (JavaScript, PostgreSQL via Supabase, autenticação e políticas de segurança em nível de linha) é só o meio. O que importa aqui é o processo: entender o fluxo real de uso, testar, quebrar, corrigir e confirmar, em qualquer sistema, de qualquer área.</p>
       </div>
     </div>
 
@@ -1450,12 +1465,12 @@ footer {
       <div class="tech-pills">
         <span class="tech-pill">JavaScript</span>
         <span class="tech-pill">Supabase / PostgreSQL</span>
-        <span class="tech-pill">Row Level Security</span>
+        <span class="tech-pill" data-i18n="pillRls">Row Level Security</span>
         <span class="tech-pill">PWA / Service Worker</span>
-        <span class="tech-pill">Importação de PDF</span>
-        <span class="tech-pill">Testes manuais &amp; UAT</span>
+        <span class="tech-pill" data-i18n="pillPdf">Importação de PDF</span>
+        <span class="tech-pill" data-i18n="pillUat">Testes manuais &amp; UAT</span>
       </div>
-      <a href="https://igorreisqa.github.io/monitorcirurgico-demo/" target="_blank" rel="noopener noreferrer" class="proj-live" style="text-decoration:none;">ver demonstração ao vivo →</a>
+      <a href="https://igorreisqa.github.io/monitorcirurgico-demo/" target="_blank" rel="noopener noreferrer" class="proj-live" style="text-decoration:none;" data-i18n="projLiveLink">ver demonstração ao vivo →</a>
     </div>
   </div>
 </div>
@@ -1464,58 +1479,58 @@ footer {
 
 <!-- ATUALIZAÇÕES RECENTES -->
 <div class="section" id="atualizacoes">
-  <div class="s-label">// changelog</div>
-  <h2 class="s-title">O projeto continua evoluindo,<br><em>não é uma entrega parada no tempo.</em></h2>
+  <div class="s-label" data-i18n="changelogLabel">// changelog</div>
+  <h2 class="s-title" data-i18n="changelogTitle">O projeto continua evoluindo,<br><em>não é uma entrega parada no tempo.</em></h2>
 
   <div class="timeline">
-    <div class="tl-header">// últimas entregas no Monitor Cirúrgico</div>
+    <div class="tl-header" data-i18n="changelogTlHeader">// últimas entregas no Monitor Cirúrgico</div>
     <div class="tl-items">
       <div class="tl-item">
         <div class="tl-dot"><div class="tl-dot-inner"></div></div>
         <div class="tl-content">
-          <div class="tl-date">Jul 2026</div>
-          <div class="tl-title">Unificação das duas unidades num app só, com modo Consolidado</div>
-          <div class="tl-desc">Campo Grande e Cuiabá eram dois sistemas separados, cada um com seu próprio código e banco de dados. Migrei os dois pra um único app, mantendo cada cidade com seu banco independente, e criei um modo "Consolidado" que junta as duas visões sem misturar os dados — a parte mais arriscada do trabalho, já que uma escrita roteada errado significa registro indo parar no banco da cidade errada.</div>
+          <div class="tl-date" data-i18n="chg1Date">Jul 2026</div>
+          <div class="tl-title" data-i18n="chg1Title">Unificação das duas unidades num app só, com modo Consolidado</div>
+          <div class="tl-desc" data-i18n="chg1Desc">Campo Grande e Cuiabá eram dois sistemas separados, cada um com seu próprio código e banco de dados. Migrei os dois pra um único app, mantendo cada cidade com seu banco independente, e criei um modo "Consolidado" que junta as duas visões sem misturar os dados — a parte mais arriscada do trabalho, já que uma escrita roteada errado significa registro indo parar no banco da cidade errada.</div>
         </div>
       </div>
       <div class="tl-item">
         <div class="tl-dot"><div class="tl-dot-inner"></div></div>
         <div class="tl-content">
-          <div class="tl-date">Jul 2026</div>
-          <div class="tl-title">Bug real de dado duplicado entre cidades: achado, investigado e corrigido</div>
-          <div class="tl-desc">Consultando os dois bancos diretamente, encontrei registros de Campo Grande salvos por engano dentro do banco de Cuiabá (resultado de uma restauração de backup na unidade errada, antes da unificação). Confirmei que os dados corretos continuavam intactos na unidade certa antes de remover as cópias indevidas.</div>
+          <div class="tl-date" data-i18n="chg2Date">Jul 2026</div>
+          <div class="tl-title" data-i18n="chg2Title">Bug real de dado duplicado entre cidades: achado, investigado e corrigido</div>
+          <div class="tl-desc" data-i18n="chg2Desc">Consultando os dois bancos diretamente, encontrei registros de Campo Grande salvos por engano dentro do banco de Cuiabá (resultado de uma restauração de backup na unidade errada, antes da unificação). Confirmei que os dados corretos continuavam intactos na unidade certa antes de remover as cópias indevidas.</div>
         </div>
       </div>
       <div class="tl-item">
         <div class="tl-dot"><div class="tl-dot-inner"></div></div>
         <div class="tl-content">
-          <div class="tl-date">Jul 2026</div>
-          <div class="tl-title">Auditoria automática de duplicatas entre filiais</div>
-          <div class="tl-desc">Depois de encontrar aquele bug manualmente, criei uma verificação própria no sistema (só leitura, sem apagar nada sozinha) que compara os dois bancos e sinaliza registros com a filial errada ou a mesma nota fiscal duplicada nas duas cidades — pra não depender de alguém notar na tela.</div>
+          <div class="tl-date" data-i18n="chg3Date">Jul 2026</div>
+          <div class="tl-title" data-i18n="chg3Title">Auditoria automática de duplicatas entre filiais</div>
+          <div class="tl-desc" data-i18n="chg3Desc">Depois de encontrar aquele bug manualmente, criei uma verificação própria no sistema (só leitura, sem apagar nada sozinha) que compara os dois bancos e sinaliza registros com a filial errada ou a mesma nota fiscal duplicada nas duas cidades — pra não depender de alguém notar na tela.</div>
         </div>
       </div>
       <div class="tl-item">
         <div class="tl-dot"><div class="tl-dot-inner"></div></div>
         <div class="tl-content">
-          <div class="tl-date">Jul 2026</div>
-          <div class="tl-title">Log de atividade: quem lançou o quê, e quando</div>
-          <div class="tl-desc">Adicionei uma aba que registra cada cirurgia, coleta prioritária e ficha OPME cadastrada, com o nome de quem lançou e o horário exato — rastreabilidade que já aplico na minha rotina de compras hospitalares, agora dentro do próprio sistema.</div>
+          <div class="tl-date" data-i18n="chg4Date">Jul 2026</div>
+          <div class="tl-title" data-i18n="chg4Title">Log de atividade: quem lançou o quê, e quando</div>
+          <div class="tl-desc" data-i18n="chg4Desc">Adicionei uma aba que registra cada cirurgia, coleta prioritária e ficha OPME cadastrada, com o nome de quem lançou e o horário exato — rastreabilidade que já aplico na minha rotina de compras hospitalares, agora dentro do próprio sistema.</div>
         </div>
       </div>
       <div class="tl-item">
         <div class="tl-dot"><div class="tl-dot-inner"></div></div>
         <div class="tl-content">
-          <div class="tl-date">Jul 2026</div>
-          <div class="tl-title">Novo status "Aguardando Ficha OPME": 6 fluxos duplicados fazendo a mesma coisa</div>
-          <div class="tl-desc">Precisava inserir uma pergunta ("a ficha já foi entregue ao estoque?") em todo lugar que confirma a retirada de material. O que parecia um ajuste simples virou uma investigação: buscando pelo texto exato da pergunta original, encontrei 6 funções diferentes e independentes fazendo essa mesma confirmação, espalhadas pelo sistema — cada uma precisou do mesmo ajuste, uma por uma, pra garantir que nenhum caminho escapasse do novo status.</div>
+          <div class="tl-date" data-i18n="chg5Date">Jul 2026</div>
+          <div class="tl-title" data-i18n="chg5Title">Novo status "Aguardando Ficha OPME": 6 fluxos duplicados fazendo a mesma coisa</div>
+          <div class="tl-desc" data-i18n="chg5Desc">Precisava inserir uma pergunta ("a ficha já foi entregue ao estoque?") em todo lugar que confirma a retirada de material. O que parecia um ajuste simples virou uma investigação: buscando pelo texto exato da pergunta original, encontrei 6 funções diferentes e independentes fazendo essa mesma confirmação, espalhadas pelo sistema — cada uma precisou do mesmo ajuste, uma por uma, pra garantir que nenhum caminho escapasse do novo status.</div>
         </div>
       </div>
       <div class="tl-item">
         <div class="tl-dot"><div class="tl-dot-inner"></div></div>
         <div class="tl-content">
-          <div class="tl-date">Jul 2026</div>
-          <div class="tl-title">Campo com asterisco não é garantia de obrigatório</div>
-          <div class="tl-desc">Revisando o formulário de lançamento, encontrei campos marcados com * (convênio, nome do paciente) que passavam a impressão de obrigatórios, mas não tinham nenhuma validação real por trás — dava pra salvar em branco mesmo assim. Fechei essa lacuna entre o que a tela promete e o que o código realmente impede, e repliquei a mesma checagem em Nota Fiscal, valor e data de emissão.</div>
+          <div class="tl-date" data-i18n="chg6Date">Jul 2026</div>
+          <div class="tl-title" data-i18n="chg6Title">Campo com asterisco não é garantia de obrigatório</div>
+          <div class="tl-desc" data-i18n="chg6Desc">Revisando o formulário de lançamento, encontrei campos marcados com * (convênio, nome do paciente) que passavam a impressão de obrigatórios, mas não tinham nenhuma validação real por trás — dava pra salvar em branco mesmo assim. Fechei essa lacuna entre o que a tela promete e o que o código realmente impede, e repliquei a mesma checagem em Nota Fiscal, valor e data de emissão.</div>
         </div>
       </div>
     </div>
@@ -1526,37 +1541,37 @@ footer {
 
 <!-- STACK -->
 <div class="section" id="stack">
-  <div class="s-label">// competências</div>
-  <h2 class="s-title">O que eu sei fazer,<br><em>com honestidade sobre o nível.</em></h2>
+  <div class="s-label" data-i18n="stackLabel">// competências</div>
+  <h2 class="s-title" data-i18n="stackTitle">O que eu sei fazer,<br><em>com honestidade sobre o nível.</em></h2>
   <div class="skills-layout">
     <div>
       <div class="skill-group">
-        <div class="skill-group-label">// qa &amp; testes</div>
+        <div class="skill-group-label" data-i18n="stackGroup1">// qa &amp; testes</div>
         <div class="skill-bars">
           <div>
             <div class="skill-bar-top">
-              <span class="skill-bar-name">Teste de aceitação (UAT)</span>
+              <span class="skill-bar-name" data-i18n="skill1">Teste de aceitação (UAT)</span>
               <span class="skill-bar-pct">90%</span>
             </div>
             <div class="skill-track"><div class="skill-fill" style="width:90%"></div></div>
           </div>
           <div>
             <div class="skill-bar-top">
-              <span class="skill-bar-name">Testes manuais</span>
+              <span class="skill-bar-name" data-i18n="skill2">Testes manuais</span>
               <span class="skill-bar-pct">85%</span>
             </div>
             <div class="skill-track"><div class="skill-fill" style="width:85%"></div></div>
           </div>
           <div>
             <div class="skill-bar-top">
-              <span class="skill-bar-name">Documentação e reporte de bugs</span>
+              <span class="skill-bar-name" data-i18n="skill3">Documentação e reporte de bugs</span>
               <span class="skill-bar-pct">85%</span>
             </div>
             <div class="skill-track"><div class="skill-fill" style="width:85%"></div></div>
           </div>
           <div>
             <div class="skill-bar-top">
-              <span class="skill-bar-name">Análise de requisitos</span>
+              <span class="skill-bar-name" data-i18n="skill4">Análise de requisitos</span>
               <span class="skill-bar-pct">75%</span>
             </div>
             <div class="skill-track"><div class="skill-fill" style="width:75%"></div></div>
@@ -1564,7 +1579,7 @@ footer {
         </div>
       </div>
       <div class="skill-group">
-        <div class="skill-group-label">// conhecimento técnico (autodidata)</div>
+        <div class="skill-group-label" data-i18n="stackGroup2">// conhecimento técnico (autodidata)</div>
         <div class="skill-bars">
           <div>
             <div class="skill-bar-top">
@@ -1582,7 +1597,7 @@ footer {
           </div>
           <div>
             <div class="skill-bar-top">
-              <span class="skill-bar-name">ERPs de logística</span>
+              <span class="skill-bar-name" data-i18n="skill7">ERPs de logística</span>
               <span class="skill-bar-pct">85%</span>
             </div>
             <div class="skill-track"><div class="skill-fill" style="width:85%"></div></div>
@@ -1591,27 +1606,27 @@ footer {
       </div>
     </div>
     <div>
-      <div class="skill-group-label" style="font-family:'Fira Code',monospace;font-size:0.67rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border)">// onde aplico isso</div>
+      <div class="skill-group-label" style="font-family:'Fira Code',monospace;font-size:0.67rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border)" data-i18n="stackGroup3">// onde aplico isso</div>
       <div class="nicho-cards">
         <div class="nicho-card">
           <span class="nicho-icon">✅</span>
-          <div class="nicho-title">UAT em ERP real</div>
-          <div class="nicho-desc">Validação diária de fluxos, cadastros e regras de negócio no sistema usado pela empresa, incluindo processos de migração entre sistemas ERP.</div>
+          <div class="nicho-title" data-i18n="nicho1Title">UAT em ERP real</div>
+          <div class="nicho-desc" data-i18n="nicho1Desc">Validação diária de fluxos, cadastros e regras de negócio no sistema usado pela empresa, incluindo processos de migração entre sistemas ERP.</div>
         </div>
         <div class="nicho-card">
           <span class="nicho-icon">🎥</span>
-          <div class="nicho-title">Reprodução e documentação de bugs</div>
-          <div class="nicho-desc">Quando encontro um erro na rotina, gravo vídeo do fluxo e abro um chamado para o suporte corrigir, documentando o comportamento esperado e o encontrado.</div>
+          <div class="nicho-title" data-i18n="nicho2Title">Reprodução e documentação de bugs</div>
+          <div class="nicho-desc" data-i18n="nicho2Desc">Quando encontro um erro na rotina, gravo vídeo do fluxo e abro um chamado para o suporte corrigir, documentando o comportamento esperado e o encontrado.</div>
         </div>
         <div class="nicho-card">
           <span class="nicho-icon">🏥</span>
-          <div class="nicho-title">Conformidade regulatória</div>
-          <div class="nicho-desc">Rastreabilidade, controle de validade e aderência a normas ANVISA em compras e estoques de materiais hospitalares.</div>
+          <div class="nicho-title" data-i18n="nicho3Title">Conformidade regulatória</div>
+          <div class="nicho-desc" data-i18n="nicho3Desc">Rastreabilidade, controle de validade e aderência a normas ANVISA em compras e estoques de materiais hospitalares.</div>
         </div>
         <div class="nicho-card">
           <span class="nicho-icon">🧪</span>
-          <div class="nicho-title">Teste do meu próprio software</div>
-          <div class="nicho-desc">No Monitor Cirúrgico, testo autenticação, controle de acesso por papel e mascaramento de dados sensíveis antes de qualquer entrega.</div>
+          <div class="nicho-title" data-i18n="nicho4Title">Teste do meu próprio software</div>
+          <div class="nicho-desc" data-i18n="nicho4Desc">No Monitor Cirúrgico, testo autenticação, controle de acesso por papel e mascaramento de dados sensíveis antes de qualquer entrega.</div>
         </div>
       </div>
     </div>
@@ -1622,53 +1637,53 @@ footer {
 
 <!-- PROCESSO -->
 <div class="section" id="processo">
-  <div class="s-label">// abordagem</div>
-  <h2 class="s-title">Como eu valido<br><em>um sistema, na prática.</em></h2>
+  <div class="s-label" data-i18n="processoLabel">// abordagem</div>
+  <h2 class="s-title" data-i18n="processoTitle">Como eu valido<br><em>um sistema, na prática.</em></h2>
 
   <div class="projeto-wrapper">
     <div class="projeto-header-bar"></div>
     <div style="padding:40px 44px;">
       <div class="timeline" style="padding-top:0;">
-        <div class="tl-header">// meu processo de análise e teste</div>
+        <div class="tl-header" data-i18n="processoTlHeader">// meu processo de análise e teste</div>
         <div class="tl-items">
           <div class="tl-item">
             <div class="tl-dot"><div class="tl-dot-inner"></div></div>
             <div class="tl-content">
               <div class="tl-date">01</div>
-              <div class="tl-title">Entender o fluxo real de uso</div>
-              <div class="tl-desc">Antes de qualquer teste, entendo quem usa o sistema, o que precisa acontecer e qual é o resultado esperado, a mesma pergunta que faço há 15 anos em logística, antes de aprovar qualquer processo.</div>
+              <div class="tl-title" data-i18n="proc1Title">Entender o fluxo real de uso</div>
+              <div class="tl-desc" data-i18n="proc1Desc">Antes de qualquer teste, entendo quem usa o sistema, o que precisa acontecer e qual é o resultado esperado, a mesma pergunta que faço há 15 anos em logística, antes de aprovar qualquer processo.</div>
             </div>
           </div>
           <div class="tl-item">
             <div class="tl-dot"><div class="tl-dot-inner"></div></div>
             <div class="tl-content">
               <div class="tl-date">02</div>
-              <div class="tl-title">Validar como cliente final (UAT)</div>
-              <div class="tl-desc">Executo o fluxo do começo ao fim como quem vai usar de verdade, não só clicando em botões. É assim que faço hoje no ERP que uso no trabalho, e é assim que testei cada tela do Monitor Cirúrgico.</div>
+              <div class="tl-title" data-i18n="proc2Title">Validar como cliente final (UAT)</div>
+              <div class="tl-desc" data-i18n="proc2Desc">Executo o fluxo do começo ao fim como quem vai usar de verdade, não só clicando em botões. É assim que faço hoje no ERP que uso no trabalho, e é assim que testei cada tela do Monitor Cirúrgico.</div>
             </div>
           </div>
           <div class="tl-item">
             <div class="tl-dot"><div class="tl-dot-inner"></div></div>
             <div class="tl-content">
               <div class="tl-date">03</div>
-              <div class="tl-title">Reproduzir e documentar o bug</div>
-              <div class="tl-desc">Quando algo não bate (um dado errado, uma permissão vazando informação, um cálculo que não fecha), gravo vídeo do fluxo e registro com clareza o que era esperado, o que aconteceu e como reproduzir.</div>
+              <div class="tl-title" data-i18n="proc3Title">Reproduzir e documentar o bug</div>
+              <div class="tl-desc" data-i18n="proc3Desc">Quando algo não bate (um dado errado, uma permissão vazando informação, um cálculo que não fecha), gravo vídeo do fluxo e registro com clareza o que era esperado, o que aconteceu e como reproduzir.</div>
             </div>
           </div>
           <div class="tl-item">
             <div class="tl-dot"><div class="tl-dot-inner"></div></div>
             <div class="tl-content">
               <div class="tl-date">04</div>
-              <div class="tl-title">Confirmar a correção, não só a entrega</div>
-              <div class="tl-desc">Depois de um ajuste, revalido o mesmo fluxo (e os relacionados) antes de considerar aprovado, evitando que o mesmo problema volte disfarçado em outra tela.</div>
+              <div class="tl-title" data-i18n="proc4Title">Confirmar a correção, não só a entrega</div>
+              <div class="tl-desc" data-i18n="proc4Desc">Depois de um ajuste, revalido o mesmo fluxo (e os relacionados) antes de considerar aprovado, evitando que o mesmo problema volte disfarçado em outra tela.</div>
             </div>
           </div>
           <div class="tl-item">
             <div class="tl-dot"><div class="tl-dot-inner dim"></div></div>
             <div class="tl-content">
               <div class="tl-date">05</div>
-              <div class="tl-title">Documentar para quem vem depois</div>
-              <div class="tl-desc">Um problema encontrado só tem valor se outra pessoa consegue entender, reproduzir e confirmar a solução sem precisar me perguntar.</div>
+              <div class="tl-title" data-i18n="proc5Title">Documentar para quem vem depois</div>
+              <div class="tl-desc" data-i18n="proc5Desc">Um problema encontrado só tem valor se outra pessoa consegue entender, reproduzir e confirmar a solução sem precisar me perguntar.</div>
             </div>
           </div>
         </div>
@@ -1676,13 +1691,13 @@ footer {
     </div>
     <div class="proj-footer">
       <div class="tech-pills">
-        <span class="tech-pill">Requisitos</span>
+        <span class="tech-pill" data-i18n="pillRequisitos">Requisitos</span>
         <span class="tech-pill">UAT</span>
-        <span class="tech-pill">Evidência de bug</span>
-        <span class="tech-pill">Reteste</span>
-        <span class="tech-pill">Documentação</span>
+        <span class="tech-pill" data-i18n="pillEvidencia">Evidência de bug</span>
+        <span class="tech-pill" data-i18n="pillReteste">Reteste</span>
+        <span class="tech-pill" data-i18n="pillDocumentacao">Documentação</span>
       </div>
-      <div class="proj-live">a mesma abordagem, em qualquer sistema ou área</div>
+      <div class="proj-live" data-i18n="processoLive">a mesma abordagem, em qualquer sistema ou área</div>
     </div>
   </div>
 </div>
@@ -1693,9 +1708,9 @@ footer {
 <div class="section" id="contato">
   <div class="contato-grid">
     <div class="contato-left">
-      <div class="s-label">// contato</div>
-      <h2>Vamos conversar sobre <em>QA?</em></h2>
-      <p>Estou aberto a conversas, trocas e oportunidades na área de QA e Testes de Software. Se você quer entender melhor minha trajetória ou já tem uma vaga em mente, me chama.</p>
+      <div class="s-label" data-i18n="contatoLabel">// contato</div>
+      <h2 data-i18n="contatoH2">Vamos conversar sobre <em>QA?</em></h2>
+      <p data-i18n="contatoP">Estou aberto a conversas, trocas e oportunidades na área de QA e Testes de Software. Se você quer entender melhor minha trajetória ou já tem uma vaga em mente, me chama.</p>
       <div class="contato-items">
         <a href="mailto:igorreis.qa@gmail.com" class="contato-link" aria-label="Enviar e-mail">
           <div class="contato-link-icon">📧</div>
@@ -1711,20 +1726,20 @@ footer {
         </a>
         <a href="https://wa.me/5567991409831" target="_blank" rel="noopener noreferrer" class="contato-link" aria-label="WhatsApp">
           <div class="contato-link-icon">💬</div>
-          WhatsApp · resposta rápida
+          <span data-i18n="contatoWhats">WhatsApp · resposta rápida</span>
         </a>
       </div>
     </div>
     <div class="disponivel-card">
-      <div class="disp-status">Aberto a oportunidades</div>
-      <h3>Em transição para QA</h3>
-      <p>Buscando minha primeira oportunidade formal em Testes de Software / QA. Respondo em até 24h.</p>
+      <div class="disp-status" data-i18n="dispStatus">Aberto a oportunidades</div>
+      <h3 data-i18n="dispH3">Em transição para QA</h3>
+      <p data-i18n="dispP">Buscando minha primeira oportunidade formal em Testes de Software / QA. Respondo em até 24h.</p>
       <div class="plataformas">
-        <div class="plat-item"><span class="plat-name">QA &amp; Testes de Software</span><span class="plat-tag">FOCO</span></div>
-        <div class="plat-item"><span class="plat-name">Remoto ou Campo Grande/MS</span><span class="plat-tag">ABERTO</span></div>
-        <div class="plat-item"><span class="plat-name">LinkedIn</span><span class="plat-tag">ATIVO</span></div>
+        <div class="plat-item"><span class="plat-name" data-i18n="plat1Name">QA &amp; Testes de Software</span><span class="plat-tag" data-i18n="plat1Tag">FOCO</span></div>
+        <div class="plat-item"><span class="plat-name" data-i18n="plat2Name">Remoto ou Campo Grande/MS</span><span class="plat-tag" data-i18n="plat2Tag">ABERTO</span></div>
+        <div class="plat-item"><span class="plat-name">LinkedIn</span><span class="plat-tag" data-i18n="plat3Tag">ATIVO</span></div>
       </div>
-      <a href="mailto:igorreis.qa@gmail.com" class="btn-primary" style="width:100%;justify-content:center;">Enviar mensagem →</a>
+      <a href="mailto:igorreis.qa@gmail.com" class="btn-primary" style="width:100%;justify-content:center;" data-i18n="dispBtn">Enviar mensagem →</a>
     </div>
   </div>
 </div>
@@ -1732,14 +1747,478 @@ footer {
 </div><!-- /overflow wrapper -->
 
 <footer>
-  <div class="footer-left">&copy; 2025–2026 <span>Igor Reis</span> &middot; Campo Grande/MS &middot; Todos os direitos reservados</div>
+  <div class="footer-left" data-i18n="footerLeft">&copy; 2025–2026 <span>Igor Reis</span> &middot; Campo Grande/MS &middot; Todos os direitos reservados</div>
   <div class="footer-right">
     <span id="visit-counter">👁 ...</span>
-    <span>UAT · Testes manuais · Documentação de bugs</span>
+    <span data-i18n="footerRight">UAT · Testes manuais · Documentação de bugs</span>
   </div>
 </footer>
 
 <script>
+  // ─── I18N: pt-BR / pt-PT / ES / EN ───
+  var I18N = {
+    'pt-BR': {
+      pageTitle: `Igor Reis · QA | Analista de Testes de Software (em transição)`,
+      navSobre: `Sobre`, navExperiencia: `Experiência`, navProjeto: `Projeto`, navAtualizacoes: `Atualizações`, navStack: `Competências`, navProcesso: `Abordagem`, navContato: `Contato`, navCta: `Ver demo →`,
+      heroEyebrow: `Em transição de carreira para QA`,
+      heroH1: `15+ anos validando<br><span class="accent">processos e sistemas</span><br><span class="dim">na prática. Agora, em QA.</span>`,
+      heroDesc: `Sou <strong>Igor Reis</strong>, de <strong>Campo Grande/MS</strong>. Depois de 15+ anos em logística hospitalar e varejo, validando ERPs, testando fluxos e garantindo conformidade ANVISA todos os dias, estou em transição para atuar formalmente como <strong>Analista de QA</strong>. Faço UAT no dia a dia e construí meu próprio projeto de software para aplicar essa mentalidade na prática.`,
+      heroBtnDemo: `Ver demonstração ao vivo →`, heroBtnBuilt: `Como foi construído`, heroBtnContact: `Entrar em contato`,
+      idRole: `QA · Analista de Testes (em transição)`, idBadge: `EM TRANSIÇÃO`,
+      idLabelExp: `experiência`, idValueExp: `15+ anos em logística`,
+      idLabelComp: `competências`, idValueComp: `UAT · Requisitos · Testes manuais`,
+      idLabelDominio: `domínio`, idValueDominio: `Hospitalar (ANVISA) &amp; Varejo`,
+      idLabelProjeto: `projeto pessoal`, idValueProjeto: `PWA em produção`,
+      idLabelGraduacao: `graduação`, idValueGraduacao: `Bacharel em C. Contábeis`,
+      idLabelPos2025: `pós · 2025`, idValuePos2025: `BI, Big Data &amp; Analytics`,
+      idLabelPos2024: `pós · 2024`, idValuePos2024: `MBA em Logística e Supply Chain`,
+      idLabelPos2020: `pós · 2020`, idValuePos2020: `Gestão de Logística Empresarial`,
+      idLabelPos2018: `pós · 2018`, idValuePos2018: `Direito Tributário`,
+      idLabelCursando: `cursando`, idValueCursando: `Análise e Desenvolvimento de Sistemas`,
+      tagTestesManuais: `Testes manuais`, tagDocBugs: `Documentação e reporte de bugs`, tagSistemaErp: `Sistema ERP`, tagAutomacao: `Automação (em estudo)`,
+      stat1: `Anos de<br>experiência em logística`, stat2: `Anos em logística<br>hospitalar (ANVISA)`, stat3: `PWA pessoal<br>em produção`, stat4: `Unidades usando<br>o sistema (CGR e CBA)`,
+      sobreLabel: `// sobre mim`,
+      sobreTitle: `Validar sistemas na prática,<br><em>agora com nome: QA.</em>`,
+      sobreP1: `Estou em <strong>transição de carreira para atuar como Analista de QA</strong>. Ainda não tenho experiência profissional formal na área, mas venho me dedicando de forma consistente a essa mudança: estudo na <strong>QA Academy da Qazando</strong>, curso Análise e Desenvolvimento de Sistemas, e pratico o que aprendo em projetos reais.`,
+      sobreP2: `Antes disso, construí mais de <strong>15 anos de trajetória em logística</strong>: 7 anos em varejo e 8 anos em logística hospitalar, com compras, gestão de estoques e materiais consignados, sempre em ambientes com exigência rígida de conformidade regulatória (<strong>ANVISA</strong>), rastreabilidade e controle de qualidade.`,
+      sobreP3: `No dia a dia, realizo testes manuais, incluindo <strong>testes de aceitação (UAT)</strong>: atuo como cliente final dos sistemas que utilizo, validando pessoalmente cada fluxo e funcionalidade antes de aprovar novas versões e ajustes, sob a perspectiva de quem vai usar o sistema no dia a dia. Já participei diretamente da validação em processos de migração entre sistemas ERP, uma prática que se conecta diretamente com o trabalho de QA.`,
+      sobreP4: `Quando encontro um erro na rotina, gravo vídeo do fluxo e abro um chamado para o suporte do sistema corrigir, aplicando na prática a reprodução e documentação de bugs.`,
+      diferencialH4: `// meu diferencial`,
+      diferencialP: `Não venho de um bootcamp sem contexto de negócio. Venho de 15 anos vendo o que acontece quando um sistema falha na prática: ruptura de estoque, material vencido, retrabalho, não conformidade. É essa mentalidade analítica, testada em ambiente real, que quero levar para QA.`,
+      formacaoLabel: `// formação &amp; certificações`,
+      form1Title: `QA Academy`, form1Sub: `Qazando · Em curso`,
+      form2Title: `Análise e Desenvolvimento de Sistemas`, form2Sub: `Centro Universitário FAM · 2025–2027 (cursando)`,
+      form3Title: `Pós em Business Intelligence, Big Data &amp; Analytics`, form3Sub: `Anhanguera · 2025`,
+      form4Title: `MBA em Logística e Supply Chain Management`, form4Sub: `Anhanguera · 2024`,
+      form5Title: `Pós em Gestão de Logística e Gestão Empresarial`, form5Sub: `Faculdade Batista de Minas Gerais · 2020–2021`,
+      form6Title: `Pós em Direito Tributário`, form6Sub: `Anhanguera · 2017–2018`,
+      form7Title: `Graduação em Ciências Contábeis`, form7Sub: `Formação de base`,
+      expLabel: `// experiência profissional`,
+      expTitle: `15 anos de operação,<br><em>testando na prática antes de ser QA.</em>`,
+      expBadge: `Trajetória · 2010 – atual`, expProjTitle: `Logística, compras e validação de sistemas`,
+      expProjDesc: `Da auditoria contábil à gestão de compras hospitalares, sempre em funções que exigem atenção a detalhes, rastreabilidade e conformidade com regras rígidas.`,
+      expMeta1: `Prática diária`, expMeta2: `Conformidade`, expMeta3: `Materiais consignados`, expMeta4: `Migração de ERP`,
+      expStoryLabel: `// migração de sistema, na prática`,
+      expStoryP: `Já participei diretamente da validação em processos de <strong>migração entre sistemas ERP</strong>: testando fluxos, comparando comportamento entre as versões e aprovando o que estava pronto para uso, uma prática que se conecta diretamente com o trabalho de QA.`,
+      expTlHeader: `// linha do tempo profissional`,
+      tl1Date: `Ago 2022 - atual (4 anos)`, tl1Title: `Analista Administrativo · GF Medical Comércio e Representações`,
+      tl1Desc: `Realização de testes manuais e testes de aceitação (UAT) em sistemas ERP, validando processos e fluxos, e identificando e reportando inconsistências operacionais antes da aprovação de novas versões, incluindo migração de sistema ERP. Relatórios gerenciais com base em KPIs logísticos (giro de estoque, ruptura, tempo de reposição). Gestão de compras hospitalares, estoques e materiais consignados (OPMEs), com foco em rastreabilidade, controle de validade e conformidade ANVISA. Coordenação da logística de almoxarifado, farmácia e centro cirúrgico, incluindo transporte de urgência para materiais críticos. Liderança de equipes operacionais e administrativas de logística e suprimentos, com relacionamento e negociação junto a fornecedores.`,
+      tl2Date: `Nov 2018 - Ago 2022 (3a 10m)`, tl2Title: `Assistente Administrativo · GF Medical Comércio e Representações`, tl2Desc: `Campo Grande, Mato Grosso do Sul.`,
+      tl3Date: `Mar 2018 - Mai 2018 (3 meses)`, tl3Title: `Analista Fiscal · Soldamaq`, tl3Desc: `Análise e conciliação de notas fiscais de entrada e saída, verificação de tributação e correção de divergências fiscais e contábeis.`,
+      tl4Date: `Dez 2013 - Mar 2018 (4a 4m)`, tl4Title: `Assistente Administrativo · Multicoisas Franquias`, tl4Desc: `Análise e conciliação de notas fiscais, controle de logística reversa (recebimento, inspeção e destinação de devoluções) e participação na migração de estoque Campo Grande–Araçariguama, com uso de sistema WMS.`,
+      tl5Date: `Mai 2011 - Dez 2013 (2a 8m)`, tl5Title: `Auxiliar Contábil · Multicoisas Franquias`, tl5Desc: `Escrituração fiscal, apuração de impostos e elaboração de obrigações acessórias, com suporte a relatórios e demonstrativos fiscais.`,
+      tl6Date: `Set 2010 - Abr 2011 (8 meses)`, tl6Title: `Auxiliar de Escritório · Lebarbenchon, Auditoria e Perícia Contábil`, tl6Desc: `Suporte a auditorias contábeis: conferência de documentos financeiros, elaboração de relatórios e revisão de controles internos.`,
+      pillKpis: `KPIs logísticos`, expProjLive: `15+ anos · logística, compras e conformidade`,
+      projLabel: `// projeto pessoal`,
+      projTitle: `Não esperei virar QA<br><em>para começar a testar de verdade.</em>`,
+      projBadge: `Em produção · Tempo real`,
+      projDesc: `Um sistema operacional em tempo real que construí sozinho pra resolver um problema real de logística: acompanhar status, documentos e prazos de procedimentos com múltiplos usuários, sem depender de planilha solta. Começou como dois sistemas separados, um por unidade, e evoluiu pra um único app que atende as duas cidades, com um modo consolidado que junta os dados das duas numa visão só, sem misturar o que é de uma com o que é da outra. Não é um projeto de portfólio só para "mostrar que sei programar", é onde eu aplico, na prática, a mesma mentalidade analítica que quero levar para QA: testar fluxos, achar inconsistência, corrigir e confirmar que ficou certo.`,
+      projBtnDemo: `Testar a demonstração ao vivo →`,
+      projMeta1: `Unidades em produção`, projMeta2: `Instalável, funciona offline`, projMeta3: `Segurança por papel`, projMeta4: `Atualização automática`,
+      projImgLabel: `// painel executivo, ambiente de demonstração (dados fictícios)`,
+      projStoryLabel: `// o que esse projeto prova, na prática`,
+      projStoryP1: `Construir o Monitor Cirúrgico me colocou nos dois lados ao mesmo tempo: quem constrói o sistema e quem depende dele todos os dias. Isso me obrigou a testar de verdade, não só "clicar pra ver se abre", mas validar regra de negócio, checar permissão de acesso por papel de usuário e confirmar que um dado sensível está mascarado do jeito certo antes de mostrar pra alguém de fora.`,
+      projStoryP2: `Ao longo do desenvolvimento, encontrei e corrigi bugs reais de autenticação, controle de acesso e importação automática de PDF, aplicando a mesma reprodução e documentação de bugs que faço hoje na minha rotina profissional, só que aplicada ao próprio código.`,
+      projStoryP3: `Unificar as duas unidades no modo consolidado foi o teste mais exigente do projeto: cada cidade tem seu próprio banco de dados, então uma escrita roteada errado significa registro de paciente indo parar no lugar errado. Consultando o banco diretamente, encontrei um caso real de dado duplicado entre as duas cidades (uma restauração de backup feita na unidade errada) — investiguei a causa, corrigi o roteamento de escrita e confirmei, registro por registro, que cada cidade só grava no próprio banco antes de considerar a função pronta pra dado real.`,
+      projStoryP4: `A arquitetura (JavaScript, PostgreSQL via Supabase, autenticação e políticas de segurança em nível de linha) é só o meio. O que importa aqui é o processo: entender o fluxo real de uso, testar, quebrar, corrigir e confirmar, em qualquer sistema, de qualquer área.`,
+      pillRls: `Row Level Security`, pillPdf: `Importação de PDF`, pillUat: `Testes manuais &amp; UAT`, projLiveLink: `ver demonstração ao vivo →`,
+      changelogLabel: `// changelog`,
+      changelogTitle: `O projeto continua evoluindo,<br><em>não é uma entrega parada no tempo.</em>`,
+      changelogTlHeader: `// últimas entregas no Monitor Cirúrgico`,
+      chg1Date: `Jul 2026`, chg1Title: `Unificação das duas unidades num app só, com modo Consolidado`,
+      chg1Desc: `Campo Grande e Cuiabá eram dois sistemas separados, cada um com seu próprio código e banco de dados. Migrei os dois pra um único app, mantendo cada cidade com seu banco independente, e criei um modo "Consolidado" que junta as duas visões sem misturar os dados — a parte mais arriscada do trabalho, já que uma escrita roteada errado significa registro indo parar no banco da cidade errada.`,
+      chg2Date: `Jul 2026`, chg2Title: `Bug real de dado duplicado entre cidades: achado, investigado e corrigido`,
+      chg2Desc: `Consultando os dois bancos diretamente, encontrei registros de Campo Grande salvos por engano dentro do banco de Cuiabá (resultado de uma restauração de backup na unidade errada, antes da unificação). Confirmei que os dados corretos continuavam intactos na unidade certa antes de remover as cópias indevidas.`,
+      chg3Date: `Jul 2026`, chg3Title: `Auditoria automática de duplicatas entre filiais`,
+      chg3Desc: `Depois de encontrar aquele bug manualmente, criei uma verificação própria no sistema (só leitura, sem apagar nada sozinha) que compara os dois bancos e sinaliza registros com a filial errada ou a mesma nota fiscal duplicada nas duas cidades — pra não depender de alguém notar na tela.`,
+      chg4Date: `Jul 2026`, chg4Title: `Log de atividade: quem lançou o quê, e quando`,
+      chg4Desc: `Adicionei uma aba que registra cada cirurgia, coleta prioritária e ficha OPME cadastrada, com o nome de quem lançou e o horário exato — rastreabilidade que já aplico na minha rotina de compras hospitalares, agora dentro do próprio sistema.`,
+      chg5Date: `Jul 2026`, chg5Title: `Novo status "Aguardando Ficha OPME": 6 fluxos duplicados fazendo a mesma coisa`,
+      chg5Desc: `Precisava inserir uma pergunta ("a ficha já foi entregue ao estoque?") em todo lugar que confirma a retirada de material. O que parecia um ajuste simples virou uma investigação: buscando pelo texto exato da pergunta original, encontrei 6 funções diferentes e independentes fazendo essa mesma confirmação, espalhadas pelo sistema — cada uma precisou do mesmo ajuste, uma por uma, pra garantir que nenhum caminho escapasse do novo status.`,
+      chg6Date: `Jul 2026`, chg6Title: `Campo com asterisco não é garantia de obrigatório`,
+      chg6Desc: `Revisando o formulário de lançamento, encontrei campos marcados com * (convênio, nome do paciente) que passavam a impressão de obrigatórios, mas não tinham nenhuma validação real por trás — dava pra salvar em branco mesmo assim. Fechei essa lacuna entre o que a tela promete e o que o código realmente impede, e repliquei a mesma checagem em Nota Fiscal, valor e data de emissão.`,
+      stackLabel: `// competências`,
+      stackTitle: `O que eu sei fazer,<br><em>com honestidade sobre o nível.</em>`,
+      stackGroup1: `// qa &amp; testes`, skill1: `Teste de aceitação (UAT)`, skill2: `Testes manuais`, skill3: `Documentação e reporte de bugs`, skill4: `Análise de requisitos`,
+      stackGroup2: `// conhecimento técnico (autodidata)`, skill7: `ERPs de logística`,
+      stackGroup3: `// onde aplico isso`,
+      nicho1Title: `UAT em ERP real`, nicho1Desc: `Validação diária de fluxos, cadastros e regras de negócio no sistema usado pela empresa, incluindo processos de migração entre sistemas ERP.`,
+      nicho2Title: `Reprodução e documentação de bugs`, nicho2Desc: `Quando encontro um erro na rotina, gravo vídeo do fluxo e abro um chamado para o suporte corrigir, documentando o comportamento esperado e o encontrado.`,
+      nicho3Title: `Conformidade regulatória`, nicho3Desc: `Rastreabilidade, controle de validade e aderência a normas ANVISA em compras e estoques de materiais hospitalares.`,
+      nicho4Title: `Teste do meu próprio software`, nicho4Desc: `No Monitor Cirúrgico, testo autenticação, controle de acesso por papel e mascaramento de dados sensíveis antes de qualquer entrega.`,
+      processoLabel: `// abordagem`,
+      processoTitle: `Como eu valido<br><em>um sistema, na prática.</em>`,
+      processoTlHeader: `// meu processo de análise e teste`,
+      proc1Title: `Entender o fluxo real de uso`, proc1Desc: `Antes de qualquer teste, entendo quem usa o sistema, o que precisa acontecer e qual é o resultado esperado, a mesma pergunta que faço há 15 anos em logística, antes de aprovar qualquer processo.`,
+      proc2Title: `Validar como cliente final (UAT)`, proc2Desc: `Executo o fluxo do começo ao fim como quem vai usar de verdade, não só clicando em botões. É assim que faço hoje no ERP que uso no trabalho, e é assim que testei cada tela do Monitor Cirúrgico.`,
+      proc3Title: `Reproduzir e documentar o bug`, proc3Desc: `Quando algo não bate (um dado errado, uma permissão vazando informação, um cálculo que não fecha), gravo vídeo do fluxo e registro com clareza o que era esperado, o que aconteceu e como reproduzir.`,
+      proc4Title: `Confirmar a correção, não só a entrega`, proc4Desc: `Depois de um ajuste, revalido o mesmo fluxo (e os relacionados) antes de considerar aprovado, evitando que o mesmo problema volte disfarçado em outra tela.`,
+      proc5Title: `Documentar para quem vem depois`, proc5Desc: `Um problema encontrado só tem valor se outra pessoa consegue entender, reproduzir e confirmar a solução sem precisar me perguntar.`,
+      pillRequisitos: `Requisitos`, pillEvidencia: `Evidência de bug`, pillReteste: `Reteste`, pillDocumentacao: `Documentação`, processoLive: `a mesma abordagem, em qualquer sistema ou área`,
+      contatoLabel: `// contato`, contatoH2: `Vamos conversar sobre <em>QA?</em>`,
+      contatoP: `Estou aberto a conversas, trocas e oportunidades na área de QA e Testes de Software. Se você quer entender melhor minha trajetória ou já tem uma vaga em mente, me chama.`,
+      contatoWhats: `WhatsApp · resposta rápida`,
+      dispStatus: `Aberto a oportunidades`, dispH3: `Em transição para QA`,
+      dispP: `Buscando minha primeira oportunidade formal em Testes de Software / QA. Respondo em até 24h.`,
+      plat1Name: `QA &amp; Testes de Software`, plat1Tag: `FOCO`, plat2Name: `Remoto ou Campo Grande/MS`, plat2Tag: `ABERTO`, plat3Tag: `ATIVO`, dispBtn: `Enviar mensagem →`,
+      footerLeft: `&copy; 2025–2026 <span>Igor Reis</span> &middot; Campo Grande/MS &middot; Todos os direitos reservados`,
+      footerRight: `UAT · Testes manuais · Documentação de bugs`,
+    },
+    'pt-PT': {
+      pageTitle: `Igor Reis · QA | Analista de Testes de Software (em transição)`,
+      navSobre: `Sobre`, navExperiencia: `Experiência`, navProjeto: `Projeto`, navAtualizacoes: `Atualizações`, navStack: `Competências`, navProcesso: `Abordagem`, navContato: `Contacto`, navCta: `Ver demo →`,
+      heroEyebrow: `Em transição de carreira para QA`,
+      heroH1: `15+ anos a validar<br><span class="accent">processos e sistemas</span><br><span class="dim">na prática. Agora, em QA.</span>`,
+      heroDesc: `Sou o <strong>Igor Reis</strong>, de <strong>Campo Grande/MS, Brasil</strong>. Depois de 15+ anos em logística hospitalar e retalho, a validar ERPs, a testar fluxos e a garantir conformidade regulatória todos os dias, estou em transição para atuar formalmente como <strong>Analista de QA</strong>. Faço UAT no dia a dia e construí o meu próprio projeto de software para aplicar essa mentalidade na prática.`,
+      heroBtnDemo: `Ver demonstração ao vivo →`, heroBtnBuilt: `Como foi construído`, heroBtnContact: `Entrar em contacto`,
+      idRole: `QA · Analista de Testes (em transição)`, idBadge: `EM TRANSIÇÃO`,
+      idLabelExp: `experiência`, idValueExp: `15+ anos em logística`,
+      idLabelComp: `competências`, idValueComp: `UAT · Requisitos · Testes manuais`,
+      idLabelDominio: `domínio`, idValueDominio: `Hospitalar (regulatório) &amp; Retalho`,
+      idLabelProjeto: `projeto pessoal`, idValueProjeto: `PWA em produção`,
+      idLabelGraduacao: `licenciatura`, idValueGraduacao: `Licenciatura em Contabilidade`,
+      idLabelPos2025: `pós-grad. · 2025`, idValuePos2025: `BI, Big Data &amp; Analytics`,
+      idLabelPos2024: `pós-grad. · 2024`, idValuePos2024: `MBA em Logística e Supply Chain`,
+      idLabelPos2020: `pós-grad. · 2020`, idValuePos2020: `Gestão de Logística Empresarial`,
+      idLabelPos2018: `pós-grad. · 2018`, idValuePos2018: `Direito Fiscal`,
+      idLabelCursando: `a frequentar`, idValueCursando: `Análise e Desenvolvimento de Sistemas`,
+      tagTestesManuais: `Testes manuais`, tagDocBugs: `Documentação e reporte de bugs`, tagSistemaErp: `Sistema ERP`, tagAutomacao: `Automação (em estudo)`,
+      stat1: `Anos de<br>experiência em logística`, stat2: `Anos em logística<br>hospitalar (regulatório)`, stat3: `PWA pessoal<br>em produção`, stat4: `Unidades usando<br>o sistema (CGR e CBA)`,
+      sobreLabel: `// sobre mim`,
+      sobreTitle: `Validar sistemas na prática,<br><em>agora com nome: QA.</em>`,
+      sobreP1: `Estou em <strong>transição de carreira para atuar como Analista de QA</strong>. Ainda não tenho experiência profissional formal na área, mas tenho-me dedicado de forma consistente a essa mudança: estudo na <strong>QA Academy da Qazando</strong>, o curso de Análise e Desenvolvimento de Sistemas, e coloco em prática o que aprendo em projetos reais.`,
+      sobreP2: `Antes disso, construí mais de <strong>15 anos de trajetória em logística</strong>: 7 anos em retalho e 8 anos em logística hospitalar, com compras, gestão de stocks e materiais consignados, sempre em ambientes com exigência rígida de conformidade regulatória, rastreabilidade e controlo de qualidade.`,
+      sobreP3: `No dia a dia, realizo testes manuais, incluindo <strong>testes de aceitação (UAT)</strong>: atuo como cliente final dos sistemas que utilizo, validando pessoalmente cada fluxo e funcionalidade antes de aprovar novas versões e ajustes, sob a perspetiva de quem vai usar o sistema no dia a dia. Já participei diretamente na validação de processos de migração entre sistemas ERP, uma prática que se liga diretamente ao trabalho de QA.`,
+      sobreP4: `Quando encontro um erro na rotina, gravo vídeo do fluxo e abro um pedido de suporte para o sistema corrigir, aplicando na prática a reprodução e documentação de bugs.`,
+      diferencialH4: `// o meu diferencial`,
+      diferencialP: `Não venho de um bootcamp sem contexto de negócio. Venho de 15 anos a ver o que acontece quando um sistema falha na prática: rutura de stock, material fora de validade, retrabalho, não conformidade. É essa mentalidade analítica, testada em ambiente real, que quero levar para o QA.`,
+      formacaoLabel: `// formação &amp; certificações`,
+      form1Title: `QA Academy`, form1Sub: `Qazando · Em curso`,
+      form2Title: `Análise e Desenvolvimento de Sistemas`, form2Sub: `Centro Universitário FAM · 2025–2027 (a frequentar)`,
+      form3Title: `Pós-graduação em Business Intelligence, Big Data &amp; Analytics`, form3Sub: `Anhanguera · 2025`,
+      form4Title: `MBA em Logística e Supply Chain Management`, form4Sub: `Anhanguera · 2024`,
+      form5Title: `Pós-graduação em Gestão de Logística e Gestão Empresarial`, form5Sub: `Faculdade Batista de Minas Gerais · 2020–2021`,
+      form6Title: `Pós-graduação em Direito Fiscal`, form6Sub: `Anhanguera · 2017–2018`,
+      form7Title: `Licenciatura em Contabilidade`, form7Sub: `Formação de base`,
+      expLabel: `// experiência profissional`,
+      expTitle: `15 anos de operação,<br><em>testando na prática antes de ser QA.</em>`,
+      expBadge: `Trajetória · 2010 – atual`, expProjTitle: `Logística, compras e validação de sistemas`,
+      expProjDesc: `Da auditoria contabilística à gestão de compras hospitalares, sempre em funções que exigem atenção ao detalhe, rastreabilidade e conformidade com regras rígidas.`,
+      expMeta1: `Prática diária`, expMeta2: `Conformidade`, expMeta3: `Materiais consignados`, expMeta4: `Migração de ERP`,
+      expStoryLabel: `// migração de sistema, na prática`,
+      expStoryP: `Já participei diretamente na validação de processos de <strong>migração entre sistemas ERP</strong>: testando fluxos, comparando o comportamento entre as versões e aprovando o que estava pronto para uso, uma prática que se liga diretamente ao trabalho de QA.`,
+      expTlHeader: `// linha do tempo profissional`,
+      tl1Date: `Ago 2022 - atual (4 anos)`, tl1Title: `Analista Administrativo · GF Medical Comércio e Representações`,
+      tl1Desc: `Realização de testes manuais e testes de aceitação (UAT) em sistemas ERP, validando processos e fluxos, e identificando e reportando inconsistências operacionais antes da aprovação de novas versões, incluindo migração de sistema ERP. Relatórios de gestão com base em KPIs logísticos (rotação de stock, ruturas, tempo de reposição). Gestão de compras hospitalares, stocks e materiais consignados (OPMEs), com foco em rastreabilidade, controlo de validade e conformidade regulatória. Coordenação da logística de armazém, farmácia e bloco operatório, incluindo transporte de urgência para materiais críticos. Liderança de equipas operacionais e administrativas de logística e aprovisionamento, com relacionamento e negociação junto de fornecedores.`,
+      tl2Date: `Nov 2018 - Ago 2022 (3a 10m)`, tl2Title: `Assistente Administrativo · GF Medical Comércio e Representações`, tl2Desc: `Campo Grande, Mato Grosso do Sul.`,
+      tl3Date: `Mar 2018 - Mai 2018 (3 meses)`, tl3Title: `Analista Fiscal · Soldamaq`, tl3Desc: `Análise e conciliação de notas fiscais de entrada e saída, verificação de tributação e correção de divergências fiscais e contabilísticas.`,
+      tl4Date: `Dez 2013 - Mar 2018 (4a 4m)`, tl4Title: `Assistente Administrativo · Multicoisas Franquias`, tl4Desc: `Análise e conciliação de notas fiscais, controlo de logística inversa (receção, inspeção e destino de devoluções) e participação na migração de stock Campo Grande–Araçariguama, com recurso a sistema WMS.`,
+      tl5Date: `Mai 2011 - Dez 2013 (2a 8m)`, tl5Title: `Auxiliar de Contabilidade · Multicoisas Franquias`, tl5Desc: `Escrituração fiscal, apuramento de impostos e elaboração de obrigações acessórias, com apoio a relatórios e demonstrativos fiscais.`,
+      tl6Date: `Set 2010 - Abr 2011 (8 meses)`, tl6Title: `Auxiliar de Escritório · Lebarbenchon, Auditoria e Perícia Contabilística`, tl6Desc: `Apoio a auditorias contabilísticas: conferência de documentos financeiros, elaboração de relatórios e revisão de controlos internos.`,
+      pillKpis: `KPIs logísticos`, expProjLive: `15+ anos · logística, compras e conformidade`,
+      projLabel: `// projeto pessoal`,
+      projTitle: `Não esperei virar QA<br><em>para começar a testar de verdade.</em>`,
+      projBadge: `Em produção · Tempo real`,
+      projDesc: `Um sistema operacional em tempo real que construí sozinho para resolver um problema real de logística: acompanhar estado, documentos e prazos de procedimentos com múltiplos utilizadores, sem depender de folhas de cálculo soltas. Começou como dois sistemas separados, um por unidade, e evoluiu para uma única aplicação que serve as duas cidades, com um modo consolidado que junta os dados das duas numa única visão, sem misturar o que é de uma com o que é da outra. Não é um projeto de portefólio só para "mostrar que sei programar", é onde aplico, na prática, a mesma mentalidade analítica que quero levar para o QA: testar fluxos, encontrar inconsistências, corrigir e confirmar que ficou certo.`,
+      projBtnDemo: `Testar a demonstração ao vivo →`,
+      projMeta1: `Unidades em produção`, projMeta2: `Instalável, funciona offline`, projMeta3: `Segurança por perfil`, projMeta4: `Atualização automática`,
+      projImgLabel: `// painel executivo, ambiente de demonstração (dados fictícios)`,
+      projStoryLabel: `// o que esse projeto prova, na prática`,
+      projStoryP1: `Construir o Monitor Cirúrgico colocou-me nos dois lados ao mesmo tempo: quem constrói o sistema e quem depende dele todos os dias. Isso obrigou-me a testar de verdade, não só "clicar para ver se abre", mas validar regras de negócio, verificar permissões de acesso por perfil de utilizador e confirmar que um dado sensível está mascarado da forma certa antes de o mostrar a alguém de fora.`,
+      projStoryP2: `Ao longo do desenvolvimento, encontrei e corrigi bugs reais de autenticação, controlo de acesso e importação automática de PDF, aplicando a mesma reprodução e documentação de bugs que faço hoje na minha rotina profissional, só que aplicada ao próprio código.`,
+      projStoryP3: `Unificar as duas unidades no modo consolidado foi o teste mais exigente do projeto: cada cidade tem a sua própria base de dados, por isso uma escrita mal encaminhada significa um registo de paciente a ir parar ao sítio errado. Ao consultar a base de dados diretamente, encontrei um caso real de dados duplicados entre as duas cidades (uma restauração de cópia de segurança feita na unidade errada) — investiguei a causa, corrigi o encaminhamento da escrita e confirmei, registo a registo, que cada cidade só grava na sua própria base antes de considerar a função pronta para dados reais.`,
+      projStoryP4: `A arquitetura (JavaScript, PostgreSQL via Supabase, autenticação e políticas de segurança ao nível da linha) é só o meio. O que importa aqui é o processo: entender o fluxo real de uso, testar, quebrar, corrigir e confirmar, em qualquer sistema, de qualquer área.`,
+      pillRls: `Row Level Security`, pillPdf: `Importação de PDF`, pillUat: `Testes manuais &amp; UAT`, projLiveLink: `ver demonstração ao vivo →`,
+      changelogLabel: `// changelog`,
+      changelogTitle: `O projeto continua a evoluir,<br><em>não é uma entrega parada no tempo.</em>`,
+      changelogTlHeader: `// últimas entregas no Monitor Cirúrgico`,
+      chg1Date: `Jul 2026`, chg1Title: `Unificação das duas unidades num só app, com modo Consolidado`,
+      chg1Desc: `Campo Grande e Cuiabá eram dois sistemas separados, cada um com o seu próprio código e base de dados. Migrei os dois para uma única aplicação, mantendo cada cidade com a sua base independente, e criei um modo "Consolidado" que junta as duas visões sem misturar os dados — a parte mais arriscada do trabalho, já que uma escrita mal encaminhada significa um registo a ir parar à base de dados da cidade errada.`,
+      chg2Date: `Jul 2026`, chg2Title: `Bug real de dados duplicados entre cidades: encontrado, investigado e corrigido`,
+      chg2Desc: `Ao consultar as duas bases de dados diretamente, encontrei registos de Campo Grande gravados por engano na base de Cuiabá (resultado de uma restauração de cópia de segurança na unidade errada, antes da unificação). Confirmei que os dados corretos continuavam intactos na unidade certa antes de remover as cópias indevidas.`,
+      chg3Date: `Jul 2026`, chg3Title: `Auditoria automática de duplicados entre filiais`,
+      chg3Desc: `Depois de encontrar aquele bug manualmente, criei uma verificação própria no sistema (só de leitura, sem apagar nada sozinha) que compara as duas bases de dados e sinaliza registos com a filial errada ou a mesma fatura duplicada nas duas cidades — para não depender de alguém reparar no ecrã.`,
+      chg4Date: `Jul 2026`, chg4Title: `Registo de atividade: quem lançou o quê, e quando`,
+      chg4Desc: `Adicionei um separador que regista cada cirurgia, colheita prioritária e ficha OPME cadastrada, com o nome de quem lançou e a hora exata — rastreabilidade que já aplico na minha rotina de compras hospitalares, agora dentro do próprio sistema.`,
+      chg5Date: `Jul 2026`, chg5Title: `Novo estado "Aguardando Ficha OPME": 6 fluxos duplicados a fazer a mesma coisa`,
+      chg5Desc: `Era preciso inserir uma pergunta ("a ficha já foi entregue ao stock?") em todos os locais que confirmam a retirada de material. O que parecia um ajuste simples tornou-se uma investigação: ao procurar pelo texto exato da pergunta original, encontrei 6 funções diferentes e independentes a fazer essa mesma confirmação, espalhadas pelo sistema — cada uma precisou do mesmo ajuste, uma a uma, para garantir que nenhum caminho escapasse ao novo estado.`,
+      chg6Date: `Jul 2026`, chg6Title: `Campo com asterisco não é garantia de obrigatório`,
+      chg6Desc: `Ao rever o formulário de lançamento, encontrei campos marcados com * (convénio, nome do paciente) que davam a impressão de obrigatórios, mas não tinham nenhuma validação real por trás — dava para gravar em branco na mesma. Fechei essa lacuna entre o que o ecrã promete e o que o código realmente impede, e repliquei a mesma verificação em Fatura, valor e data de emissão.`,
+      stackLabel: `// competências`,
+      stackTitle: `O que eu sei fazer,<br><em>com honestidade sobre o nível.</em>`,
+      stackGroup1: `// qa &amp; testes`, skill1: `Teste de aceitação (UAT)`, skill2: `Testes manuais`, skill3: `Documentação e reporte de bugs`, skill4: `Análise de requisitos`,
+      stackGroup2: `// conhecimento técnico (autodidata)`, skill7: `ERPs de logística`,
+      stackGroup3: `// onde aplico isso`,
+      nicho1Title: `UAT em ERP real`, nicho1Desc: `Validação diária de fluxos, cadastros e regras de negócio no sistema usado pela empresa, incluindo processos de migração entre sistemas ERP.`,
+      nicho2Title: `Reprodução e documentação de bugs`, nicho2Desc: `Quando encontro um erro na rotina, gravo vídeo do fluxo e abro um pedido de suporte para corrigir, documentando o comportamento esperado e o encontrado.`,
+      nicho3Title: `Conformidade regulatória`, nicho3Desc: `Rastreabilidade, controlo de validade e conformidade com normas regulatórias em compras e stocks de materiais hospitalares.`,
+      nicho4Title: `Teste do meu próprio software`, nicho4Desc: `No Monitor Cirúrgico, testo autenticação, controlo de acesso por perfil e mascaramento de dados sensíveis antes de qualquer entrega.`,
+      processoLabel: `// abordagem`,
+      processoTitle: `Como eu valido<br><em>um sistema, na prática.</em>`,
+      processoTlHeader: `// meu processo de análise e teste`,
+      proc1Title: `Entender o fluxo real de uso`, proc1Desc: `Antes de qualquer teste, procuro perceber quem usa o sistema, o que precisa de acontecer e qual é o resultado esperado, a mesma pergunta que faço há 15 anos em logística, antes de aprovar qualquer processo.`,
+      proc2Title: `Validar como cliente final (UAT)`, proc2Desc: `Executo o fluxo do início ao fim como quem vai usar de verdade, não só a clicar em botões. É assim que faço hoje no ERP que uso no trabalho, e foi assim que testei cada ecrã do Monitor Cirúrgico.`,
+      proc3Title: `Reproduzir e documentar o bug`, proc3Desc: `Quando algo não bate certo (um dado errado, uma permissão a deixar escapar informação, um cálculo que não fecha), gravo vídeo do fluxo e registo com clareza o que era esperado, o que aconteceu e como reproduzir.`,
+      proc4Title: `Confirmar a correção, não só a entrega`, proc4Desc: `Depois de um ajuste, revalido o mesmo fluxo (e os relacionados) antes de considerar aprovado, evitando que o mesmo problema volte disfarçado noutro ecrã.`,
+      proc5Title: `Documentar para quem vem depois`, proc5Desc: `Um problema encontrado só tem valor se outra pessoa conseguir perceber, reproduzir e confirmar a solução sem precisar de me perguntar.`,
+      pillRequisitos: `Requisitos`, pillEvidencia: `Evidência de bug`, pillReteste: `Reteste`, pillDocumentacao: `Documentação`, processoLive: `a mesma abordagem, em qualquer sistema ou área`,
+      contatoLabel: `// contacto`, contatoH2: `Vamos falar sobre <em>QA?</em>`,
+      contatoP: `Estou aberto a conversas, trocas e oportunidades na área de QA e Testes de Software. Se quiser entender melhor a minha trajetória ou já tiver uma vaga em mente, fale comigo.`,
+      contatoWhats: `WhatsApp · resposta rápida`,
+      dispStatus: `Aberto a oportunidades`, dispH3: `Em transição para QA`,
+      dispP: `À procura da minha primeira oportunidade formal em Testes de Software / QA. Respondo em até 24h.`,
+      plat1Name: `QA &amp; Testes de Software`, plat1Tag: `FOCO`, plat2Name: `Remoto ou Campo Grande/MS`, plat2Tag: `ABERTO`, plat3Tag: `ATIVO`, dispBtn: `Enviar mensagem →`,
+      footerLeft: `&copy; 2025–2026 <span>Igor Reis</span> &middot; Campo Grande/MS &middot; Todos os direitos reservados`,
+      footerRight: `UAT · Testes manuais · Documentação de bugs`,
+    },
+    es: {
+      pageTitle: `Igor Reis · QA | Analista de Pruebas de Software (en transición)`,
+      navSobre: `Sobre mí`, navExperiencia: `Experiencia`, navProjeto: `Proyecto`, navAtualizacoes: `Actualizaciones`, navStack: `Competencias`, navProcesso: `Enfoque`, navContato: `Contacto`, navCta: `Ver demo →`,
+      heroEyebrow: `En transición de carrera hacia QA`,
+      heroH1: `15+ años validando<br><span class="accent">procesos y sistemas</span><br><span class="dim">en la práctica. Ahora, en QA.</span>`,
+      heroDesc: `Soy <strong>Igor Reis</strong>, de <strong>Campo Grande/MS, Brasil</strong>. Después de 15+ años en logística hospitalaria y retail, validando ERPs, probando flujos y garantizando conformidad regulatoria todos los días, estoy en transición para actuar formalmente como <strong>Analista de QA</strong>. Hago UAT en mi día a día y construí mi propio proyecto de software para aplicar esa mentalidad en la práctica.`,
+      heroBtnDemo: `Ver demo en vivo →`, heroBtnBuilt: `Cómo fue construido`, heroBtnContact: `Ponerse en contacto`,
+      idRole: `QA · Analista de Pruebas (en transición)`, idBadge: `EN TRANSICIÓN`,
+      idLabelExp: `experiencia`, idValueExp: `15+ años en logística`,
+      idLabelComp: `competencias`, idValueComp: `UAT · Requisitos · Pruebas manuales`,
+      idLabelDominio: `dominio`, idValueDominio: `Hospitalario (regulatorio) &amp; Retail`,
+      idLabelProjeto: `proyecto personal`, idValueProjeto: `PWA en producción`,
+      idLabelGraduacao: `grado`, idValueGraduacao: `Licenciatura en Contabilidad`,
+      idLabelPos2025: `posgrado · 2025`, idValuePos2025: `BI, Big Data &amp; Analytics`,
+      idLabelPos2024: `posgrado · 2024`, idValuePos2024: `MBA en Logística y Supply Chain`,
+      idLabelPos2020: `posgrado · 2020`, idValuePos2020: `Gestión de Logística Empresarial`,
+      idLabelPos2018: `posgrado · 2018`, idValuePos2018: `Derecho Tributario`,
+      idLabelCursando: `en curso`, idValueCursando: `Análisis y Desarrollo de Sistemas`,
+      tagTestesManuais: `Pruebas manuales`, tagDocBugs: `Documentación y reporte de bugs`, tagSistemaErp: `Sistema ERP`, tagAutomacao: `Automatización (en estudio)`,
+      stat1: `Años de<br>experiencia en logística`, stat2: `Años en logística<br>hospitalaria (regulatorio)`, stat3: `PWA personal<br>en producción`, stat4: `Unidades usando<br>el sistema (CGR y CBA)`,
+      sobreLabel: `// sobre mí`,
+      sobreTitle: `Validar sistemas en la práctica,<br><em>ahora con nombre: QA.</em>`,
+      sobreP1: `Estoy en <strong>transición de carrera para actuar como Analista de QA</strong>. Todavía no tengo experiencia profesional formal en el área, pero me he dedicado de forma constante a este cambio: estudio en la <strong>QA Academy de Qazando</strong>, la carrera de Análisis y Desarrollo de Sistemas, y pongo en práctica lo que aprendo en proyectos reales.`,
+      sobreP2: `Antes de eso, construí más de <strong>15 años de trayectoria en logística</strong>: 7 años en retail y 8 años en logística hospitalaria, con compras, gestión de inventarios y materiales en consignación, siempre en entornos con exigencia estricta de conformidad regulatoria (<strong>agencia sanitaria</strong>), trazabilidad y control de calidad.`,
+      sobreP3: `En el día a día, realizo pruebas manuales, incluyendo <strong>pruebas de aceptación (UAT)</strong>: actúo como cliente final de los sistemas que utilizo, validando personalmente cada flujo y funcionalidad antes de aprobar nuevas versiones y ajustes, desde la perspectiva de quien va a usar el sistema en el día a día. Ya participé directamente en la validación de procesos de migración entre sistemas ERP, una práctica que se conecta directamente con el trabajo de QA.`,
+      sobreP4: `Cuando encuentro un error en la rutina, grabo un vídeo del flujo y abro un ticket para que el soporte del sistema lo corrija, aplicando en la práctica la reproducción y documentación de bugs.`,
+      diferencialH4: `// mi diferencial`,
+      diferencialP: `No vengo de un bootcamp sin contexto de negocio. Vengo de 15 años viendo qué pasa cuando un sistema falla en la práctica: rotura de stock, material vencido, reprocesos, no conformidad. Es esa mentalidad analítica, probada en un entorno real, la que quiero llevar a QA.`,
+      formacaoLabel: `// formación &amp; certificaciones`,
+      form1Title: `QA Academy`, form1Sub: `Qazando · En curso`,
+      form2Title: `Análisis y Desarrollo de Sistemas`, form2Sub: `Centro Universitário FAM · 2025–2027 (en curso)`,
+      form3Title: `Posgrado en Business Intelligence, Big Data &amp; Analytics`, form3Sub: `Anhanguera · 2025`,
+      form4Title: `MBA en Logística y Supply Chain Management`, form4Sub: `Anhanguera · 2024`,
+      form5Title: `Posgrado en Gestión de Logística y Gestión Empresarial`, form5Sub: `Faculdade Batista de Minas Gerais · 2020–2021`,
+      form6Title: `Posgrado en Derecho Tributario`, form6Sub: `Anhanguera · 2017–2018`,
+      form7Title: `Licenciatura en Contabilidad`, form7Sub: `Formación de base`,
+      expLabel: `// experiencia profesional`,
+      expTitle: `15 años de operación,<br><em>probando en la práctica antes de ser QA.</em>`,
+      expBadge: `Trayectoria · 2010 – actual`, expProjTitle: `Logística, compras y validación de sistemas`,
+      expProjDesc: `De la auditoría contable a la gestión de compras hospitalarias, siempre en funciones que exigen atención al detalle, trazabilidad y cumplimiento de normas estrictas.`,
+      expMeta1: `Práctica diaria`, expMeta2: `Conformidad`, expMeta3: `Materiales en consignación`, expMeta4: `Migración de ERP`,
+      expStoryLabel: `// migración de sistema, en la práctica`,
+      expStoryP: `Ya participé directamente en la validación de procesos de <strong>migración entre sistemas ERP</strong>: probando flujos, comparando el comportamiento entre versiones y aprobando lo que estaba listo para usar, una práctica que se conecta directamente con el trabajo de QA.`,
+      expTlHeader: `// línea de tiempo profesional`,
+      tl1Date: `Ago 2022 - actual (4 años)`, tl1Title: `Analista Administrativo · GF Medical Comércio e Representações`,
+      tl1Desc: `Realización de pruebas manuales y pruebas de aceptación (UAT) en sistemas ERP, validando procesos y flujos, e identificando y reportando inconsistencias operativas antes de la aprobación de nuevas versiones, incluyendo migración de sistema ERP. Informes de gestión basados en KPIs logísticos (rotación de inventario, quiebres de stock, tiempo de reposición). Gestión de compras hospitalarias, inventarios y materiales en consignación, con foco en trazabilidad, control de vencimientos y conformidad regulatoria. Coordinación de la logística de almacén, farmacia y quirófano, incluyendo transporte de urgencia para materiales críticos. Liderazgo de equipos operativos y administrativos de logística y suministros, con relación y negociación con proveedores.`,
+      tl2Date: `Nov 2018 - Ago 2022 (3a 10m)`, tl2Title: `Asistente Administrativo · GF Medical Comércio e Representações`, tl2Desc: `Campo Grande, Mato Grosso do Sul, Brasil.`,
+      tl3Date: `Mar 2018 - May 2018 (3 meses)`, tl3Title: `Analista Fiscal · Soldamaq`, tl3Desc: `Análisis y conciliación de facturas de entrada y salida, verificación de tributación y corrección de divergencias fiscales y contables.`,
+      tl4Date: `Dic 2013 - Mar 2018 (4a 4m)`, tl4Title: `Asistente Administrativo · Multicoisas Franquias`, tl4Desc: `Análisis y conciliación de facturas, control de logística inversa (recepción, inspección y destino de devoluciones) y participación en la migración de inventario Campo Grande–Araçariguama, con uso de sistema WMS.`,
+      tl5Date: `May 2011 - Dic 2013 (2a 8m)`, tl5Title: `Auxiliar Contable · Multicoisas Franquias`, tl5Desc: `Contabilización fiscal, cálculo de impuestos y elaboración de obligaciones accesorias, con apoyo en informes y estados fiscales.`,
+      tl6Date: `Sep 2010 - Abr 2011 (8 meses)`, tl6Title: `Auxiliar de Oficina · Lebarbenchon, Auditoría y Peritaje Contable`, tl6Desc: `Apoyo a auditorías contables: verificación de documentos financieros, elaboración de informes y revisión de controles internos.`,
+      pillKpis: `KPIs logísticos`, expProjLive: `15+ años · logística, compras y conformidad`,
+      projLabel: `// proyecto personal`,
+      projTitle: `No esperé a convertirme en QA<br><em>para empezar a probar de verdad.</em>`,
+      projBadge: `En producción · Tiempo real`,
+      projDesc: `Un sistema operativo en tiempo real que construí yo solo para resolver un problema real de logística: hacer seguimiento de estado, documentos y plazos de procedimientos con múltiples usuarios, sin depender de hojas de cálculo sueltas. Empezó como dos sistemas separados, uno por unidad, y evolucionó hacia una única aplicación que atiende ambas ciudades, con un modo consolidado que une los datos de las dos en una sola vista, sin mezclar lo que es de una con lo que es de la otra. No es un proyecto de portafolio solo para "demostrar que sé programar", es donde aplico, en la práctica, la misma mentalidad analítica que quiero llevar a QA: probar flujos, encontrar inconsistencias, corregir y confirmar que quedó bien.`,
+      projBtnDemo: `Probar la demo en vivo →`,
+      projMeta1: `Unidades en producción`, projMeta2: `Instalable, funciona sin conexión`, projMeta3: `Seguridad por rol`, projMeta4: `Actualización automática`,
+      projImgLabel: `// panel ejecutivo, entorno de demostración (datos ficticios)`,
+      projStoryLabel: `// lo que este proyecto demuestra, en la práctica`,
+      projStoryP1: `Construir el Monitor Quirúrgico me puso en ambos lados al mismo tiempo: quien construye el sistema y quien depende de él todos los días. Eso me obligó a probar de verdad, no solo "hacer clic para ver si abre", sino validar reglas de negocio, verificar permisos de acceso por rol de usuario y confirmar que un dato sensible está enmascarado de la forma correcta antes de mostrarlo a alguien externo.`,
+      projStoryP2: `A lo largo del desarrollo, encontré y corregí bugs reales de autenticación, control de acceso e importación automática de PDF, aplicando la misma reproducción y documentación de bugs que hago hoy en mi rutina profesional, solo que aplicada a mi propio código.`,
+      projStoryP3: `Unificar las dos unidades en el modo consolidado fue la prueba más exigente del proyecto: cada ciudad tiene su propia base de datos, así que una escritura mal enrutada significa un registro de paciente terminando en el lugar equivocado. Consultando la base de datos directamente, encontré un caso real de datos duplicados entre las dos ciudades (una restauración de backup hecha en la unidad equivocada) — investigué la causa, corregí el enrutamiento de la escritura y confirmé, registro por registro, que cada ciudad solo escribe en su propia base antes de considerar la función lista para datos reales.`,
+      projStoryP4: `La arquitectura (JavaScript, PostgreSQL vía Supabase, autenticación y políticas de seguridad a nivel de fila) es solo el medio. Lo que importa aquí es el proceso: entender el flujo real de uso, probar, romper, corregir y confirmar, en cualquier sistema, de cualquier área.`,
+      pillRls: `Row Level Security`, pillPdf: `Importación de PDF`, pillUat: `Pruebas manuales &amp; UAT`, projLiveLink: `ver demo en vivo →`,
+      changelogLabel: `// changelog`,
+      changelogTitle: `El proyecto sigue evolucionando,<br><em>no es una entrega detenida en el tiempo.</em>`,
+      changelogTlHeader: `// últimas entregas en el Monitor Quirúrgico`,
+      chg1Date: `Jul 2026`, chg1Title: `Unificación de las dos unidades en una sola app, con modo Consolidado`,
+      chg1Desc: `Campo Grande y Cuiabá eran dos sistemas separados, cada uno con su propio código y base de datos. Migré ambos a una única aplicación, manteniendo cada ciudad con su base independiente, y creé un modo "Consolidado" que une las dos vistas sin mezclar los datos — la parte más arriesgada del trabajo, ya que una escritura mal enrutada significa un registro terminando en la base de datos de la ciudad equivocada.`,
+      chg2Date: `Jul 2026`, chg2Title: `Bug real de datos duplicados entre ciudades: encontrado, investigado y corregido`,
+      chg2Desc: `Consultando ambas bases de datos directamente, encontré registros de Campo Grande guardados por error en la base de Cuiabá (resultado de una restauración de backup en la unidad equivocada, antes de la unificación). Confirmé que los datos correctos seguían intactos en la unidad correcta antes de eliminar las copias indebidas.`,
+      chg3Date: `Jul 2026`, chg3Title: `Auditoría automática de duplicados entre sucursales`,
+      chg3Desc: `Después de encontrar ese bug manualmente, creé una verificación propia en el sistema (solo lectura, sin borrar nada por sí sola) que compara las dos bases de datos y señala registros con la sucursal equivocada o la misma factura duplicada en ambas ciudades — para no depender de que alguien lo note en la pantalla.`,
+      chg4Date: `Jul 2026`, chg4Title: `Registro de actividad: quién registró qué, y cuándo`,
+      chg4Desc: `Añadí una pestaña que registra cada cirugía, recolección prioritaria y ficha OPME dada de alta, con el nombre de quién la registró y la hora exacta — trazabilidad que ya aplico en mi rutina de compras hospitalarias, ahora dentro del propio sistema.`,
+      chg5Date: `Jul 2026`, chg5Title: `Nuevo estado "Esperando Ficha OPME": 6 flujos duplicados haciendo lo mismo`,
+      chg5Desc: `Había que insertar una pregunta ("¿la ficha ya fue entregada al almacén?") en todos los lugares que confirman el retiro de material. Lo que parecía un ajuste simple se convirtió en una investigación: buscando el texto exacto de la pregunta original, encontré 6 funciones diferentes e independientes haciendo esa misma confirmación, repartidas por el sistema — cada una necesitó el mismo ajuste, una por una, para garantizar que ningún camino escapara al nuevo estado.`,
+      chg6Date: `Jul 2026`, chg6Title: `Un campo con asterisco no garantiza que sea obligatorio`,
+      chg6Desc: `Al revisar el formulario de registro, encontré campos marcados con * (seguro médico, nombre del paciente) que daban la impresión de ser obligatorios, pero no tenían ninguna validación real detrás — se podía guardar en blanco igual. Cerré esa brecha entre lo que la pantalla promete y lo que el código realmente impide, y repliqué la misma verificación en factura, valor y fecha de emisión.`,
+      stackLabel: `// competencias`,
+      stackTitle: `Lo que sé hacer,<br><em>con honestidad sobre el nivel.</em>`,
+      stackGroup1: `// qa &amp; pruebas`, skill1: `Prueba de aceptación (UAT)`, skill2: `Pruebas manuales`, skill3: `Documentación y reporte de bugs`, skill4: `Análisis de requisitos`,
+      stackGroup2: `// conocimiento técnico (autodidacta)`, skill7: `ERPs de logística`,
+      stackGroup3: `// dónde aplico esto`,
+      nicho1Title: `UAT en ERP real`, nicho1Desc: `Validación diaria de flujos, registros y reglas de negocio en el sistema usado por la empresa, incluyendo procesos de migración entre sistemas ERP.`,
+      nicho2Title: `Reproducción y documentación de bugs`, nicho2Desc: `Cuando encuentro un error en la rutina, grabo un vídeo del flujo y abro un ticket de soporte para corregirlo, documentando el comportamiento esperado y el encontrado.`,
+      nicho3Title: `Conformidad regulatoria`, nicho3Desc: `Trazabilidad, control de vencimientos y conformidad con normas regulatorias en compras e inventarios de materiales hospitalarios.`,
+      nicho4Title: `Prueba de mi propio software`, nicho4Desc: `En el Monitor Quirúrgico, pruebo autenticación, control de acceso por rol y enmascaramiento de datos sensibles antes de cualquier entrega.`,
+      processoLabel: `// enfoque`,
+      processoTitle: `Cómo valido<br><em>un sistema, en la práctica.</em>`,
+      processoTlHeader: `// mi proceso de análisis y prueba`,
+      proc1Title: `Entender el flujo real de uso`, proc1Desc: `Antes de cualquier prueba, entiendo quién usa el sistema, qué necesita ocurrir y cuál es el resultado esperado, la misma pregunta que hago desde hace 15 años en logística, antes de aprobar cualquier proceso.`,
+      proc2Title: `Validar como cliente final (UAT)`, proc2Desc: `Ejecuto el flujo de principio a fin como quien realmente lo va a usar, no solo haciendo clic en botones. Así lo hago hoy en el ERP que uso en el trabajo, y así probé cada pantalla del Monitor Quirúrgico.`,
+      proc3Title: `Reproducir y documentar el bug`, proc3Desc: `Cuando algo no cuadra (un dato incorrecto, un permiso que filtra información, un cálculo que no cierra), grabo un vídeo del flujo y registro con claridad qué se esperaba, qué ocurrió y cómo reproducirlo.`,
+      proc4Title: `Confirmar la corrección, no solo la entrega`, proc4Desc: `Después de un ajuste, revalido el mismo flujo (y los relacionados) antes de considerarlo aprobado, evitando que el mismo problema vuelva disfrazado en otra pantalla.`,
+      proc5Title: `Documentar para quien viene después`, proc5Desc: `Un problema encontrado solo tiene valor si otra persona logra entenderlo, reproducirlo y confirmar la solución sin necesidad de preguntarme.`,
+      pillRequisitos: `Requisitos`, pillEvidencia: `Evidencia de bug`, pillReteste: `Reprueba`, pillDocumentacao: `Documentación`, processoLive: `el mismo enfoque, en cualquier sistema o área`,
+      contatoLabel: `// contacto`, contatoH2: `¿Hablamos de <em>QA?</em>`,
+      contatoP: `Estoy abierto a conversaciones, intercambios y oportunidades en el área de QA y Pruebas de Software. Si quieres entender mejor mi trayectoria o ya tienes una vacante en mente, escríbeme.`,
+      contatoWhats: `WhatsApp · respuesta rápida`,
+      dispStatus: `Abierto a oportunidades`, dispH3: `En transición hacia QA`,
+      dispP: `Buscando mi primera oportunidad formal en Pruebas de Software / QA. Respondo en un máximo de 24h.`,
+      plat1Name: `QA &amp; Pruebas de Software`, plat1Tag: `ENFOQUE`, plat2Name: `Remoto o Campo Grande/MS`, plat2Tag: `ABIERTO`, plat3Tag: `ACTIVO`, dispBtn: `Enviar mensaje →`,
+      footerLeft: `&copy; 2025–2026 <span>Igor Reis</span> &middot; Campo Grande/MS, Brasil &middot; Todos los derechos reservados`,
+      footerRight: `UAT · Pruebas manuales · Documentación de bugs`,
+    },
+    en: {
+      pageTitle: `Igor Reis · QA | Software Test Analyst (in transition)`,
+      navSobre: `About`, navExperiencia: `Experience`, navProjeto: `Project`, navAtualizacoes: `Updates`, navStack: `Skills`, navProcesso: `Approach`, navContato: `Contact`, navCta: `View demo →`,
+      heroEyebrow: `Transitioning my career into QA`,
+      heroH1: `15+ years validating<br><span class="accent">processes and systems</span><br><span class="dim">in practice. Now, in QA.</span>`,
+      heroDesc: `I'm <strong>Igor Reis</strong>, from <strong>Campo Grande, Brazil</strong>. After 15+ years in hospital and retail logistics, validating ERPs, testing workflows and ensuring regulatory compliance every day, I'm transitioning to work formally as a <strong>QA Analyst</strong>. I run UAT daily and built my own software project to apply that mindset in practice.`,
+      heroBtnDemo: `See the live demo →`, heroBtnBuilt: `How it was built`, heroBtnContact: `Get in touch`,
+      idRole: `QA · Test Analyst (in transition)`, idBadge: `IN TRANSITION`,
+      idLabelExp: `experience`, idValueExp: `15+ years in logistics`,
+      idLabelComp: `skills`, idValueComp: `UAT · Requirements · Manual testing`,
+      idLabelDominio: `domain`, idValueDominio: `Healthcare (regulatory) &amp; Retail`,
+      idLabelProjeto: `personal project`, idValueProjeto: `PWA in production`,
+      idLabelGraduacao: `degree`, idValueGraduacao: `B.A. in Accounting`,
+      idLabelPos2025: `postgrad · 2025`, idValuePos2025: `BI, Big Data &amp; Analytics`,
+      idLabelPos2024: `postgrad · 2024`, idValuePos2024: `MBA in Logistics &amp; Supply Chain`,
+      idLabelPos2020: `postgrad · 2020`, idValuePos2020: `Business Logistics Management`,
+      idLabelPos2018: `postgrad · 2018`, idValuePos2018: `Tax Law`,
+      idLabelCursando: `in progress`, idValueCursando: `Systems Analysis &amp; Development`,
+      tagTestesManuais: `Manual testing`, tagDocBugs: `Bug documentation &amp; reporting`, tagSistemaErp: `ERP system`, tagAutomacao: `Automation (studying)`,
+      stat1: `Years of<br>logistics experience`, stat2: `Years in hospital<br>logistics (regulatory)`, stat3: `Personal PWA<br>in production`, stat4: `Units using<br>the system (CGR &amp; CBA)`,
+      sobreLabel: `// about me`,
+      sobreTitle: `Validating systems in practice,<br><em>now it has a name: QA.</em>`,
+      sobreP1: `I'm <strong>transitioning my career to work as a QA Analyst</strong>. I don't yet have formal professional experience in the field, but I've been consistently committed to this change: I study at <strong>Qazando's QA Academy</strong>, I'm taking a Systems Analysis &amp; Development degree, and I put what I learn into practice in real projects.`,
+      sobreP2: `Before that, I built over <strong>15 years of experience in logistics</strong>: 7 years in retail and 8 years in hospital logistics, handling purchasing, inventory management and consigned materials, always in environments with strict regulatory compliance requirements (<strong>health authority</strong>), traceability and quality control.`,
+      sobreP3: `Day to day, I perform manual testing, including <strong>user acceptance testing (UAT)</strong>: I act as the end customer of the systems I use, personally validating each flow and feature before approving new versions and changes, from the perspective of whoever will actually use the system daily. I've directly participated in validating ERP system migration processes, a practice directly connected to QA work.`,
+      sobreP4: `When I find a bug in my routine, I record a video of the flow and open a support ticket for the system team to fix it, applying in practice the same bug reproduction and documentation I do today with my own project.`,
+      diferencialH4: `// what sets me apart`,
+      diferencialP: `I don't come from a bootcamp with no business context. I come from 15 years watching what happens when a system fails in practice: stockouts, expired materials, rework, non-compliance. That's the analytical mindset, tested in a real environment, that I want to bring to QA.`,
+      formacaoLabel: `// education &amp; certifications`,
+      form1Title: `QA Academy`, form1Sub: `Qazando · In progress`,
+      form2Title: `Systems Analysis &amp; Development`, form2Sub: `Centro Universitário FAM · 2025–2027 (in progress)`,
+      form3Title: `Postgraduate in Business Intelligence, Big Data &amp; Analytics`, form3Sub: `Anhanguera · 2025`,
+      form4Title: `MBA in Logistics &amp; Supply Chain Management`, form4Sub: `Anhanguera · 2024`,
+      form5Title: `Postgraduate in Logistics Management &amp; Business Management`, form5Sub: `Faculdade Batista de Minas Gerais · 2020–2021`,
+      form6Title: `Postgraduate in Tax Law`, form6Sub: `Anhanguera · 2017–2018`,
+      form7Title: `Bachelor's in Accounting`, form7Sub: `Foundational degree`,
+      expLabel: `// professional experience`,
+      expTitle: `15 years of operations,<br><em>testing in practice before it was called QA.</em>`,
+      expBadge: `Career path · 2010 – present`, expProjTitle: `Logistics, purchasing &amp; systems validation`,
+      expProjDesc: `From accounting audits to hospital purchasing management, always in roles requiring attention to detail, traceability and compliance with strict rules.`,
+      expMeta1: `Daily practice`, expMeta2: `Compliance`, expMeta3: `Consigned materials`, expMeta4: `ERP migration`,
+      expStoryLabel: `// system migration, in practice`,
+      expStoryP: `I've directly taken part in validating <strong>ERP system migration</strong> processes: testing workflows, comparing behavior between versions and approving what was ready for use — a practice directly connected to QA work.`,
+      expTlHeader: `// professional timeline`,
+      tl1Date: `Aug 2022 - present (4 years)`, tl1Title: `Administrative Analyst · GF Medical Comércio e Representações`,
+      tl1Desc: `Performing manual testing and user acceptance testing (UAT) on ERP systems, validating processes and workflows, and identifying and reporting operational inconsistencies before approving new versions, including ERP system migration. Management reports based on logistics KPIs (inventory turnover, stockouts, replenishment time). Managing hospital purchasing, inventory and consigned materials, focused on traceability, expiration control and regulatory compliance. Coordinating warehouse, pharmacy and operating room logistics, including urgent transport for critical materials. Leading operational and administrative logistics and supply teams, with vendor relationship management and negotiation.`,
+      tl2Date: `Nov 2018 - Aug 2022 (3y 10m)`, tl2Title: `Administrative Assistant · GF Medical Comércio e Representações`, tl2Desc: `Campo Grande, Mato Grosso do Sul, Brazil.`,
+      tl3Date: `Mar 2018 - May 2018 (3 months)`, tl3Title: `Tax Analyst · Soldamaq`, tl3Desc: `Analysis and reconciliation of incoming and outgoing invoices, tax verification, and correction of fiscal and accounting discrepancies.`,
+      tl4Date: `Dec 2013 - Mar 2018 (4y 4m)`, tl4Title: `Administrative Assistant · Multicoisas Franquias`, tl4Desc: `Invoice analysis and reconciliation, reverse logistics control (receiving, inspecting and routing returns) and participation in the Campo Grande–Araçariguama inventory migration, using a WMS system.`,
+      tl5Date: `May 2011 - Dec 2013 (2y 8m)`, tl5Title: `Accounting Assistant · Multicoisas Franquias`, tl5Desc: `Tax bookkeeping, tax calculation and preparation of ancillary filings, supporting financial and tax reports.`,
+      tl6Date: `Sep 2010 - Apr 2011 (8 months)`, tl6Title: `Office Assistant · Lebarbenchon, Accounting Audit &amp; Forensics`, tl6Desc: `Supporting accounting audits: reviewing financial documents, preparing reports and reviewing internal controls.`,
+      pillKpis: `Logistics KPIs`, expProjLive: `15+ years · logistics, purchasing &amp; compliance`,
+      projLabel: `// personal project`,
+      projTitle: `I didn't wait to become a QA<br><em>to start testing for real.</em>`,
+      projBadge: `In production · Real-time`,
+      projDesc: `A real-time operational system I built on my own to solve a real logistics problem: tracking status, documents and deadlines for procedures with multiple users, without relying on loose spreadsheets. It started as two separate systems, one per unit, and evolved into a single app serving both cities, with a consolidated mode that merges data from both into one view without mixing what belongs to one city with the other. It's not a portfolio project just to "show I can code" — it's where I apply, in practice, the same analytical mindset I want to bring to QA: test flows, find inconsistencies, fix them, and confirm they're right.`,
+      projBtnDemo: `Try the live demo →`,
+      projMeta1: `Units in production`, projMeta2: `Installable, works offline`, projMeta3: `Role-based security`, projMeta4: `Automatic updates`,
+      projImgLabel: `// executive dashboard, demo environment (fictional data)`,
+      projStoryLabel: `// what this project proves, in practice`,
+      projStoryP1: `Building the Monitor Cirúrgico put me on both sides at once: the one who builds the system and the one who depends on it every day. That forced me to actually test, not just "click to see if it opens," but validate business rules, check role-based access permissions, and confirm sensitive data is masked correctly before showing it to an outsider.`,
+      projStoryP2: `Throughout development, I found and fixed real bugs in authentication, access control and automatic PDF import, applying the same bug reproduction and documentation I do today in my professional routine, just applied to my own code.`,
+      projStoryP3: `Unifying the two units in consolidated mode was the project's toughest test: each city has its own database, so a misrouted write means a patient record ending up in the wrong place. Querying the database directly, I found a real case of duplicate data between the two cities (a backup restore done on the wrong unit) — I investigated the cause, fixed the write routing, and confirmed, record by record, that each city only writes to its own database before considering the feature ready for real data.`,
+      projStoryP4: `The architecture (JavaScript, PostgreSQL via Supabase, authentication and row-level security policies) is just the means. What matters here is the process: understanding the real usage flow, testing, breaking, fixing and confirming — in any system, in any field.`,
+      pillRls: `Row Level Security`, pillPdf: `PDF import`, pillUat: `Manual testing &amp; UAT`, projLiveLink: `see the live demo →`,
+      changelogLabel: `// changelog`,
+      changelogTitle: `The project keeps evolving,<br><em>it's not a delivery frozen in time.</em>`,
+      changelogTlHeader: `// latest updates to Monitor Cirúrgico`,
+      chg1Date: `Jul 2026`, chg1Title: `Unifying both units into a single app, with Consolidated mode`,
+      chg1Desc: `Campo Grande and Cuiabá were two separate systems, each with its own code and database. I migrated both into a single app, keeping each city on its own independent database, and built a "Consolidated" mode that merges both views without mixing the data — the riskiest part of the work, since a misrouted write means a record ending up in the wrong city's database.`,
+      chg2Date: `Jul 2026`, chg2Title: `Real duplicate-data bug between cities: found, investigated and fixed`,
+      chg2Desc: `Querying both databases directly, I found Campo Grande records mistakenly saved in Cuiabá's database (the result of a backup restore on the wrong unit, before unification). I confirmed the correct data remained intact in the right unit before removing the improper copies.`,
+      chg3Date: `Jul 2026`, chg3Title: `Automatic audit for duplicates across branches`,
+      chg3Desc: `After finding that bug manually, I built a built-in check (read-only, never deletes anything on its own) that compares both databases and flags records with the wrong branch or the same invoice duplicated across both cities — so it doesn't depend on someone spotting it on screen.`,
+      chg4Date: `Jul 2026`, chg4Title: `Activity log: who entered what, and when`,
+      chg4Desc: `I added a tab that logs every surgery, priority pickup and OPME (implant) form entered, with the name of who entered it and the exact time — traceability I already apply in my hospital purchasing routine, now built into the system itself.`,
+      chg5Date: `Jul 2026`, chg5Title: `New "Awaiting OPME Form" status: 6 duplicate flows doing the same thing`,
+      chg5Desc: `I needed to insert one question ("has the form already been delivered to stock?") everywhere that confirms material pickup. What looked like a simple tweak turned into an investigation: searching for the exact wording of the original question, I found 6 different, independent functions doing that same confirmation, scattered across the system — each one needed the same fix, one by one, to make sure no path escaped the new status.`,
+      chg6Date: `Jul 2026`, chg6Title: `A field marked with an asterisk isn't a guarantee it's required`,
+      chg6Desc: `Reviewing the entry form, I found fields marked with * (insurance provider, patient name) that gave the impression of being required, but had no real validation behind them — you could still save them blank. I closed that gap between what the screen promises and what the code actually enforces, and applied the same check to invoice number, amount and issue date.`,
+      stackLabel: `// skills`,
+      stackTitle: `What I can do,<br><em>with honesty about the level.</em>`,
+      stackGroup1: `// qa &amp; testing`, skill1: `User acceptance testing (UAT)`, skill2: `Manual testing`, skill3: `Bug documentation &amp; reporting`, skill4: `Requirements analysis`,
+      stackGroup2: `// technical knowledge (self-taught)`, skill7: `Logistics ERPs`,
+      stackGroup3: `// where I apply this`,
+      nicho1Title: `UAT on a real ERP`, nicho1Desc: `Daily validation of workflows, records and business rules in the company's system, including ERP migration processes.`,
+      nicho2Title: `Bug reproduction &amp; documentation`, nicho2Desc: `When I find a bug in my routine, I record a video of the flow and open a support ticket to fix it, documenting expected vs. actual behavior.`,
+      nicho3Title: `Regulatory compliance`, nicho3Desc: `Traceability, expiration control and adherence to regulatory standards in hospital materials purchasing and inventory.`,
+      nicho4Title: `Testing my own software`, nicho4Desc: `In Monitor Cirúrgico, I test authentication, role-based access control and sensitive-data masking before any release.`,
+      processoLabel: `// approach`,
+      processoTitle: `How I validate<br><em>a system, in practice.</em>`,
+      processoTlHeader: `// my analysis &amp; testing process`,
+      proc1Title: `Understand the real usage flow`, proc1Desc: `Before any test, I understand who uses the system, what needs to happen, and what the expected result is — the same question I've asked for 15 years in logistics, before approving any process.`,
+      proc2Title: `Validate as the end customer (UAT)`, proc2Desc: `I run the flow start to finish as someone who'll actually use it, not just clicking buttons. That's how I do it today in the ERP I use at work, and that's how I tested every screen of Monitor Cirúrgico.`,
+      proc3Title: `Reproduce and document the bug`, proc3Desc: `When something doesn't add up (wrong data, a permission leaking information, a calculation that doesn't close), I record a video of the flow and clearly document what was expected, what happened, and how to reproduce it.`,
+      proc4Title: `Confirm the fix, not just the delivery`, proc4Desc: `After a fix, I re-validate the same flow (and related ones) before considering it approved, preventing the same issue from coming back disguised on another screen.`,
+      proc5Title: `Document for whoever comes next`, proc5Desc: `A bug found only has value if someone else can understand, reproduce and confirm the fix without having to ask me.`,
+      pillRequisitos: `Requirements`, pillEvidencia: `Bug evidence`, pillReteste: `Retest`, pillDocumentacao: `Documentation`, processoLive: `the same approach, in any system or field`,
+      contatoLabel: `// contact`, contatoH2: `Let's talk about <em>QA?</em>`,
+      contatoP: `I'm open to conversations, exchanges and opportunities in QA and Software Testing. If you want to understand my background better or already have a role in mind, reach out.`,
+      contatoWhats: `WhatsApp · quick reply`,
+      dispStatus: `Open to opportunities`, dispH3: `Transitioning into QA`,
+      dispP: `Looking for my first formal opportunity in Software Testing / QA. I reply within 24h.`,
+      plat1Name: `QA &amp; Software Testing`, plat1Tag: `FOCUS`, plat2Name: `Remote or Campo Grande, Brazil`, plat2Tag: `OPEN`, plat3Tag: `ACTIVE`, dispBtn: `Send message →`,
+      footerLeft: `&copy; 2025–2026 <span>Igor Reis</span> &middot; Campo Grande, Brazil &middot; All rights reserved`,
+      footerRight: `UAT · Manual testing · Bug documentation`,
+    },
+  };
+
+  function wrapBtnArrows() {
+    document.querySelectorAll('.btn-primary, .btn-secondary').forEach(function(btn) {
+      btn.innerHTML = btn.innerHTML.replace(/→/g, '<span class="btn-arr">→</span>');
+    });
+  }
+
+  function applyLang(lang) {
+    var dict = I18N[lang] || I18N['pt-BR'];
+    document.querySelectorAll('[data-i18n]').forEach(function(el) {
+      var key = el.getAttribute('data-i18n');
+      if (dict[key] !== undefined) el.innerHTML = dict[key];
+    });
+    if (dict.pageTitle) document.title = dict.pageTitle;
+    document.documentElement.lang = lang === 'es' ? 'es' : (lang === 'en' ? 'en' : 'pt-BR');
+    wrapBtnArrows();
+    var sel1 = document.getElementById('langSwitch');
+    var sel2 = document.getElementById('langSwitchMobile');
+    if (sel1) sel1.value = lang;
+    if (sel2) sel2.value = lang;
+    try { localStorage.setItem('portfolioLang', lang); } catch(e) {}
+  }
+
+  (function initLang() {
+    var saved = 'pt-BR';
+    try { saved = localStorage.getItem('portfolioLang') || 'pt-BR'; } catch(e) {}
+    applyLang(saved);
+    var sel1 = document.getElementById('langSwitch');
+    var sel2 = document.getElementById('langSwitchMobile');
+    if (sel1) sel1.addEventListener('change', function() { applyLang(this.value); });
+    if (sel2) sel2.addEventListener('change', function() { applyLang(this.value); });
+  })();
+
   // Scroll progress bar
   const scrollBar = document.getElementById('scrollBar');
   window.addEventListener('scroll', () => {
@@ -1854,13 +2333,12 @@ footer {
   })();
 
   // -- 8. MICRO-INTERACAO: SETA ANIMADA NOS BOTOES --
+  // A injeção do span (wrapBtnArrows) já roda no initLang() acima, e de novo
+  // a cada troca de idioma — aqui só o CSS da animação.
   (function() {
     var style = document.createElement('style');
     style.textContent = '.btn-arr{display:inline-block;transition:transform 0.22s cubic-bezier(.34,1.56,.64,1);}.btn-primary:hover .btn-arr{transform:translateX(5px);}.btn-secondary:hover .btn-arr{transform:translateX(4px);}';
     document.head.appendChild(style);
-    document.querySelectorAll('.btn-primary, .btn-secondary').forEach(function(btn) {
-      btn.innerHTML = btn.innerHTML.replace(/→/g, '<span class="btn-arr">→</span>');
-    });
   })();
 </script>
 
