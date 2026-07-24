@@ -20,25 +20,27 @@
 
 :root {
   --bg:      #ffffff;
-  --bg2:     #f9fafb;
+  --bg2:     #f8faf7;
   --card:    #ffffff;
-  --card2:   #f9fafb;
-  --card3:   #f3f4f6;
+  --card2:   #f8faf7;
+  --card3:   #f0f4f1;
   --green:   #059669;
   --green2:  #047857;
-  --green-dim: rgba(5,150,105,0.08);
-  --green-border: rgba(5,150,105,0.18);
+  --green-deep: #022c22;
+  --green-dim: rgba(5,150,105,0.09);
+  --green-border: rgba(5,150,105,0.22);
   --amber:   #f59e0b;
   --blue:    #3b82f6;
-  --white:   #111827;
+  --ink:     #06110d;
+  --white:   #0d1512;
   --text:    #374151;
   --muted:   #6b7280;
-  --border:  rgba(0,0,0,0.09);
-  --border2: rgba(0,0,0,0.05);
-  --shadow:  0 4px 24px rgba(0,0,0,0.07);
-  --shadow2: 0 16px 48px rgba(0,0,0,0.10);
-  --r:       14px;
-  --r2:      20px;
+  --border:  rgba(6,17,13,0.12);
+  --border2: rgba(6,17,13,0.06);
+  --shadow:  0 6px 28px rgba(6,17,13,0.08);
+  --shadow2: 0 22px 60px rgba(6,17,13,0.14);
+  --r:       10px;
+  --r2:      18px;
 }
 
 html { scroll-behavior: smooth; }
@@ -50,6 +52,7 @@ body {
   overflow-x: hidden;
   line-height: 1.6;
   font-size: 15px;
+  counter-reset: secnum;
 }
 
 /* ─── CURSOR GLOW ─── */
@@ -204,6 +207,25 @@ nav {
   z-index: 1;
 }
 
+.hero::before {
+  content: 'QA';
+  position: absolute;
+  top: 42%; left: -0.06em;
+  transform: translateY(-50%);
+  font-family: 'Fira Code', monospace;
+  font-weight: 700;
+  font-size: min(34vw, 480px);
+  line-height: 1;
+  letter-spacing: -0.06em;
+  color: var(--green);
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: -1;
+  -webkit-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
 .hero-left { padding-top: 32px; }
 
 .hero-eyebrow {
@@ -232,10 +254,10 @@ nav {
 }
 
 .hero h1 {
-  font-weight: 800;
-  font-size: clamp(2.6rem, 5vw, 4.2rem);
-  line-height: 1.08;
-  letter-spacing: -0.035em;
+  font-weight: 900;
+  font-size: clamp(2.9rem, 6vw, 5rem);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
   margin-bottom: 24px;
   animation: fadeUp 0.4s ease 0.08s both;
 }
@@ -265,49 +287,63 @@ nav {
   align-items: center;
   gap: 8px;
   background: var(--green);
-  color: var(--bg);
-  padding: 12px 24px;
-  border-radius: 9px;
+  color: #fff;
+  padding: 13px 26px;
+  border-radius: 6px;
+  border: 1.5px solid var(--green);
   font-weight: 700;
   font-size: 0.875rem;
   text-decoration: none;
   letter-spacing: -0.01em;
   transition: transform 0.18s, box-shadow 0.18s, opacity 0.18s;
 }
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(5,150,105,0.28); opacity: 0.95; }
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(5,150,105,0.35); opacity: 0.96; }
 
 .btn-secondary {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  border: 1px solid var(--border);
+  border: 1.5px solid var(--border);
   background: var(--card);
   color: var(--text);
-  padding: 12px 24px;
-  border-radius: 9px;
-  font-weight: 500;
+  padding: 13px 26px;
+  border-radius: 6px;
+  font-weight: 700;
   font-size: 0.875rem;
   text-decoration: none;
-  transition: border-color 0.18s, color 0.18s, background 0.18s;
+  transition: border-color 0.18s, color 0.18s, background 0.18s, transform 0.18s;
 }
+.btn-secondary:hover { transform: translateY(-3px); }
 .btn-secondary:hover { border-color: var(--green-border); color: var(--green); background: var(--green-dim); }
 
-/* ─── ID CARD ─── */
+/* ─── ID CARD → "terminal de testes" ─── */
 .hero-right { animation: fadeUp 0.4s ease 0.24s both; }
 
 .id-card {
-  background: var(--card);
-  border: 1px solid var(--border);
+  background: var(--ink);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: var(--r2);
   overflow: hidden;
   position: relative;
-  box-shadow: var(--shadow2);
+  box-shadow: var(--shadow2), 0 0 0 1px rgba(5,150,105,0.12);
 }
 .id-card-accent {
-  height: 3px;
-  background: linear-gradient(90deg, var(--green), var(--green2), transparent);
+  height: 34px;
+  background: rgba(255,255,255,0.04);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  align-items: center;
 }
-.id-card-body { padding: 28px; }
+.id-card-accent::before {
+  content: '';
+  display: inline-block;
+  width: 9px; height: 9px;
+  margin-left: 16px;
+  border-radius: 50%;
+  background: #ef4444;
+  box-shadow: 17px 0 0 #f59e0b, 34px 0 0 #22c55e;
+}
+.id-card-body { padding: 26px 28px 28px; font-family: 'Fira Code', monospace; }
 
 .id-top {
   display: flex;
@@ -315,13 +351,13 @@ nav {
   gap: 14px;
   margin-bottom: 24px;
   padding-bottom: 20px;
-  border-bottom: 1px solid var(--border2);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 .id-avatar {
   width: 52px; height: 52px;
   border-radius: 12px;
-  background: linear-gradient(135deg, #05966920 0%, #04785720 100%);
-  border: 1px solid var(--green-border);
+  background: rgba(5,150,105,0.16);
+  border: 1px solid rgba(5,150,105,0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -329,40 +365,41 @@ nav {
   flex-shrink: 0;
 }
 .id-info { flex: 1; }
-.id-name { font-weight: 700; font-size: 0.95rem; letter-spacing: -0.01em; }
-.id-role { font-size: 0.75rem; color: var(--muted); margin-top: 2px; }
+.id-name { font-weight: 700; font-size: 0.95rem; letter-spacing: -0.01em; color: #fff; }
+.id-role { font-size: 0.75rem; color: rgba(255,255,255,0.5); margin-top: 2px; }
 .id-badge {
-  background: var(--green-dim);
-  border: 1px solid var(--green-border);
+  background: rgba(34,197,94,0.14);
+  border: 1px solid rgba(34,197,94,0.4);
   border-radius: 6px;
   padding: 3px 9px;
   font-size: 0.65rem;
   font-weight: 700;
-  color: var(--green);
+  color: #4ade80;
   font-family: 'Fira Code', monospace;
   letter-spacing: 0.05em;
 }
 .id-rows { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
-.id-row { display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; }
-.id-row-label { color: var(--muted); font-family: 'Fira Code', monospace; font-size: 0.68rem; }
-.id-row-value { font-weight: 600; font-size: 0.8rem; }
-.id-row-value.green { color: var(--green); }
+.id-row { display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; gap: 10px; }
+.id-row-label { color: rgba(255,255,255,0.4); font-family: 'Fira Code', monospace; font-size: 0.68rem; }
+.id-row-label::before { content: '$ '; color: rgba(34,197,94,0.7); }
+.id-row-value { font-weight: 600; font-size: 0.8rem; color: #dff5ea; text-align: right; }
+.id-row-value.green { color: #4ade80; }
 .id-stack {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
   padding-top: 18px;
-  border-top: 1px solid var(--border2);
+  border-top: 1px solid rgba(255,255,255,0.08);
 }
 .id-tag {
-  background: var(--border2);
-  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: 5px;
   padding: 3px 9px;
   font-size: 0.68rem;
   font-weight: 500;
   font-family: 'Fira Code', monospace;
-  color: var(--text);
+  color: #cfe9dc;
 }
 
 /* ─── STATS BAR ─── */
@@ -379,12 +416,13 @@ nav {
 .stat {
   padding: 28px 24px;
   border-right: 1px solid var(--border);
+  border-top: 3px solid transparent;
   text-align: center;
   position: relative;
-  transition: background 0.2s;
+  transition: background 0.2s, border-color 0.2s;
 }
 .stat:last-child { border-right: none; }
-.stat:hover { background: var(--card); }
+.stat:hover { background: var(--card); border-top-color: var(--green); }
 .stat-n {
   font-weight: 800;
   font-size: 2.4rem;
@@ -407,6 +445,23 @@ nav {
   max-width: 1240px;
   margin: 0 auto;
   padding: 96px 56px;
+  counter-increment: secnum;
+}
+
+.section::before {
+  content: counter(secnum, decimal-leading-zero);
+  position: absolute;
+  top: 74px; right: 40px;
+  font-family: 'Fira Code', monospace;
+  font-weight: 800;
+  font-size: clamp(4rem, 11vw, 9rem);
+  line-height: 1;
+  color: var(--green);
+  opacity: 0.06;
+  z-index: -1;
+  pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .s-label {
@@ -419,10 +474,10 @@ nav {
   opacity: 0.9;
 }
 .s-title {
-  font-weight: 800;
-  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
-  letter-spacing: -0.03em;
-  line-height: 1.08;
+  font-weight: 900;
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
+  letter-spacing: -0.035em;
+  line-height: 1.05;
   margin-bottom: 52px;
 }
 .s-title em {
@@ -477,9 +532,10 @@ nav {
   display: flex;
   gap: 12px;
   align-items: flex-start;
-  transition: border-color 0.18s, background 0.18s;
+  border-left: 3px solid transparent;
+  transition: border-color 0.18s, background 0.18s, transform 0.18s;
 }
-.form-item:hover { border-color: var(--green-border); background: var(--card2); }
+.form-item:hover { border-color: var(--border); border-left-color: var(--green); background: var(--card2); transform: translateX(3px); }
 .form-icon { font-size: 1rem; flex-shrink: 0; margin-top: 2px; }
 .form-title { font-weight: 600; font-size: 0.8rem; margin-bottom: 3px; letter-spacing: -0.01em; }
 .form-sub { font-size: 0.69rem; color: var(--muted); font-family: 'Fira Code', monospace; }
@@ -493,8 +549,8 @@ nav {
   box-shadow: var(--shadow);
 }
 .projeto-header-bar {
-  height: 3px;
-  background: linear-gradient(90deg, var(--green), var(--green2), transparent);
+  height: 6px;
+  background: linear-gradient(90deg, var(--green), var(--green2), var(--green-deep));
 }
 .projeto-top {
   padding: 44px 44px 0;
@@ -596,7 +652,8 @@ nav {
 .story-card {
   background: #f8fafc;
   border: 1px solid var(--border);
-  border-radius: var(--r);
+  border-left: 5px solid var(--green);
+  border-radius: 0 var(--r) var(--r) 0;
   padding: 28px 32px;
   position: relative;
 }
@@ -849,9 +906,10 @@ nav {
   border: 1px solid var(--border);
   border-radius: var(--r);
   padding: 20px 22px;
-  transition: border-color 0.18s, background 0.18s;
+  border-top: 3px solid transparent;
+  transition: border-color 0.18s, background 0.18s, transform 0.18s;
 }
-.nicho-card:hover { border-color: var(--green-border); background: var(--card2); }
+.nicho-card:hover { border-color: var(--border); border-top-color: var(--green); background: var(--card2); transform: translateY(-3px); }
 .nicho-icon { font-size: 1.4rem; margin-bottom: 8px; display: block; }
 .nicho-title { font-weight: 700; font-size: 0.88rem; margin-bottom: 5px; letter-spacing: -0.01em; }
 .nicho-desc { font-size: 0.78rem; color: var(--text); line-height: 1.6; }
@@ -985,9 +1043,23 @@ nav {
 /* ─── DIVIDER ─── */
 .section-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--border), transparent);
   max-width: 1240px;
   margin: 0 auto;
+  position: relative;
+  background: repeating-linear-gradient(90deg, var(--border) 0 6px, transparent 6px 14px);
+}
+.section-divider::before {
+  content: '+';
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Fira Code', monospace;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--green);
+  opacity: 0.55;
+  background: var(--bg);
+  padding: 0 12px;
 }
 
 /* ─── FOOTER ─── */
@@ -1602,6 +1674,13 @@ footer {
             </div>
             <div class="skill-track"><div class="skill-fill" style="width:85%"></div></div>
           </div>
+          <div>
+            <div class="skill-bar-top">
+              <span class="skill-bar-name" data-i18n="skill8">Sistema WMS</span>
+              <span class="skill-bar-pct">65%</span>
+            </div>
+            <div class="skill-track"><div class="skill-fill" style="width:65%"></div></div>
+          </div>
         </div>
       </div>
     </div>
@@ -1840,7 +1919,7 @@ footer {
       stackLabel: `// competências`,
       stackTitle: `O que eu sei fazer,<br><em>com honestidade sobre o nível.</em>`,
       stackGroup1: `// qa &amp; testes`, skill1: `Teste de aceitação (UAT)`, skill2: `Testes manuais`, skill3: `Documentação e reporte de bugs`, skill4: `Análise de requisitos`,
-      stackGroup2: `// conhecimento técnico (autodidata)`, skill7: `ERPs de logística`,
+      stackGroup2: `// conhecimento técnico (autodidata)`, skill7: `ERPs de logística`, skill8: `Sistema WMS`,
       stackGroup3: `// onde aplico isso`,
       nicho1Title: `UAT em ERP real`, nicho1Desc: `Validação diária de fluxos, cadastros e regras de negócio no sistema usado pela empresa, incluindo processos de migração entre sistemas ERP.`,
       nicho2Title: `Reprodução e documentação de bugs`, nicho2Desc: `Quando encontro um erro na rotina, gravo vídeo do fluxo e abro um chamado para o suporte corrigir, documentando o comportamento esperado e o encontrado.`,
@@ -1947,7 +2026,7 @@ footer {
       stackLabel: `// competências`,
       stackTitle: `O que eu sei fazer,<br><em>com honestidade sobre o nível.</em>`,
       stackGroup1: `// qa &amp; testes`, skill1: `Teste de aceitação (UAT)`, skill2: `Testes manuais`, skill3: `Documentação e reporte de bugs`, skill4: `Análise de requisitos`,
-      stackGroup2: `// conhecimento técnico (autodidata)`, skill7: `ERPs de logística`,
+      stackGroup2: `// conhecimento técnico (autodidata)`, skill7: `ERPs de logística`, skill8: `Sistema WMS`,
       stackGroup3: `// onde aplico isso`,
       nicho1Title: `UAT em ERP real`, nicho1Desc: `Validação diária de fluxos, cadastros e regras de negócio no sistema usado pela empresa, incluindo processos de migração entre sistemas ERP.`,
       nicho2Title: `Reprodução e documentação de bugs`, nicho2Desc: `Quando encontro um erro na rotina, gravo vídeo do fluxo e abro um pedido de suporte para corrigir, documentando o comportamento esperado e o encontrado.`,
@@ -2054,7 +2133,7 @@ footer {
       stackLabel: `// competencias`,
       stackTitle: `Lo que sé hacer,<br><em>con honestidad sobre el nivel.</em>`,
       stackGroup1: `// qa &amp; pruebas`, skill1: `Prueba de aceptación (UAT)`, skill2: `Pruebas manuales`, skill3: `Documentación y reporte de bugs`, skill4: `Análisis de requisitos`,
-      stackGroup2: `// conocimiento técnico (autodidacta)`, skill7: `ERPs de logística`,
+      stackGroup2: `// conocimiento técnico (autodidacta)`, skill7: `ERPs de logística`, skill8: `Sistema WMS`,
       stackGroup3: `// dónde aplico esto`,
       nicho1Title: `UAT en ERP real`, nicho1Desc: `Validación diaria de flujos, registros y reglas de negocio en el sistema usado por la empresa, incluyendo procesos de migración entre sistemas ERP.`,
       nicho2Title: `Reproducción y documentación de bugs`, nicho2Desc: `Cuando encuentro un error en la rutina, grabo un vídeo del flujo y abro un ticket de soporte para corregirlo, documentando el comportamiento esperado y el encontrado.`,
@@ -2161,7 +2240,7 @@ footer {
       stackLabel: `// skills`,
       stackTitle: `What I can do,<br><em>with honesty about the level.</em>`,
       stackGroup1: `// qa &amp; testing`, skill1: `User acceptance testing (UAT)`, skill2: `Manual testing`, skill3: `Bug documentation &amp; reporting`, skill4: `Requirements analysis`,
-      stackGroup2: `// technical knowledge (self-taught)`, skill7: `Logistics ERPs`,
+      stackGroup2: `// technical knowledge (self-taught)`, skill7: `Logistics ERPs`, skill8: `WMS system`,
       stackGroup3: `// where I apply this`,
       nicho1Title: `UAT on a real ERP`, nicho1Desc: `Daily validation of workflows, records and business rules in the company's system, including ERP migration processes.`,
       nicho2Title: `Bug reproduction &amp; documentation`, nicho2Desc: `When I find a bug in my routine, I record a video of the flow and open a support ticket to fix it, documenting expected vs. actual behavior.`,
