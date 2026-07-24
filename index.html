@@ -1605,6 +1605,62 @@ footer {
           <div class="tl-desc" data-i18n="chg6Desc">Revisando o formulário de lançamento, encontrei campos marcados com * (convênio, nome do paciente) que passavam a impressão de obrigatórios, mas não tinham nenhuma validação real por trás — dava pra salvar em branco mesmo assim. Fechei essa lacuna entre o que a tela promete e o que o código realmente impede, e repliquei a mesma checagem em Nota Fiscal, valor e data de emissão.</div>
         </div>
       </div>
+      <div class="tl-item">
+        <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+        <div class="tl-content">
+          <div class="tl-date" data-i18n="chg7Date">Jul 2026</div>
+          <div class="tl-title" data-i18n="chg7Title">Bug real: a conta de demonstração caía na tela errada</div>
+          <div class="tl-desc" data-i18n="chg7Desc">A marcação de "isto é a conta demo" só era calculada dentro de um branch específico do login (perfil "visualização"). Se a conta de demonstração tivesse outro papel salvo no banco, essa marcação nunca rodava, e o sistema caía no Painel Executivo em vez da Central Cirúrgica — sem nenhum erro visível, só o comportamento errado. Movi a verificação pra rodar sempre, independente de qual caminho do login for seguido.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+        <div class="tl-content">
+          <div class="tl-date" data-i18n="chg8Date">Jul 2026</div>
+          <div class="tl-title" data-i18n="chg8Title">Lembrete de cobrança 2x ao dia, por operador</div>
+          <div class="tl-desc" data-i18n="chg8Desc">O lembrete de cobrança (Aguardando Retirada / Ficha OPME) passou a disparar automaticamente às 8h e às 14h, um por operador identificado, bloqueando a tela até a pessoa escolher uma opção — pra não depender de alguém lembrar de cobrar manualmente.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+        <div class="tl-content">
+          <div class="tl-date" data-i18n="chg9Date">Jul 2026</div>
+          <div class="tl-title" data-i18n="chg9Title">Sequência obrigatória no login da conta compartilhada: operador → lembrete → resumo do dia</div>
+          <div class="tl-desc" data-i18n="chg9Desc">Nas contas de e-mail compartilhadas entre operadores, unifiquei a ordem: primeiro obriga escolher o nome de quem está operando, só depois mostra o lembrete de cobrança e, por último, abre o resumo do dia automaticamente — sempre nessa ordem, sem depender de qual conta específica a pessoa usou pra entrar.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+        <div class="tl-content">
+          <div class="tl-date" data-i18n="chg10Date">Jul 2026</div>
+          <div class="tl-title" data-i18n="chg10Title">Filtro por mês na aba Atividade</div>
+          <div class="tl-desc" data-i18n="chg10Desc">A aba que mostra quem lançou o quê ganhou um filtro por mês, tanto no resumo por operador quanto na lista detalhada de lançamentos — antes só dava pra ver o total acumulado, sem saber quanto foi feito em cada período.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+        <div class="tl-content">
+          <div class="tl-date" data-i18n="chg11Date">Jul 2026</div>
+          <div class="tl-title" data-i18n="chg11Title">Confirmação Sim/Não antes de sair ou mudar notificações</div>
+          <div class="tl-desc" data-i18n="chg11Desc">Sair do sistema e ativar/desativar notificações agora pedem uma confirmação explícita antes de executar, evitando ação acidental — um clique errado no botão de sair não desconecta mais ninguém sem querer.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+        <div class="tl-content">
+          <div class="tl-date" data-i18n="chg12Date">Jul 2026</div>
+          <div class="tl-title" data-i18n="chg12Title">Fix de um ReferenceError silencioso que travava sons e atualizações</div>
+          <div class="tl-desc" data-i18n="chg12Desc">Uma função estava definida sem underscore (getAudioCtx) mas era chamada com underscore (_getAudioCtx) em dois lugares diferentes — o erro só aparecia no console ao entrar no modo Consolidado e quebrava, sem aviso nenhum, a atualização de estatísticas e cards que vinha depois dela na mesma cadeia de chamadas.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"><div class="tl-dot-inner dim"></div></div>
+        <div class="tl-content">
+          <div class="tl-date" data-i18n="chg13Date">Jul 2026</div>
+          <div class="tl-title" data-i18n="chg13Title">Deploy parou de responder ao GitHub: diagnosticado e contornado</div>
+          <div class="tl-desc" data-i18n="chg13Desc">Depois de várias tentativas de reenviar o código sem sucesso, entrei no painel de deployments e confirmei, comparando os hashes de commit, que o gatilho automático do GitHub simplesmente parou de chegar em três projetos ao mesmo tempo — não era falha de build. Contornei publicando manualmente via "Create Deployment" enquanto a causa raiz do lado da hospedagem não é resolvida.</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -1916,6 +1972,20 @@ footer {
       chg5Desc: `Precisava inserir uma pergunta ("a ficha já foi entregue ao estoque?") em todo lugar que confirma a retirada de material. O que parecia um ajuste simples virou uma investigação: buscando pelo texto exato da pergunta original, encontrei 6 funções diferentes e independentes fazendo essa mesma confirmação, espalhadas pelo sistema — cada uma precisou do mesmo ajuste, uma por uma, pra garantir que nenhum caminho escapasse do novo status.`,
       chg6Date: `Jul 2026`, chg6Title: `Campo com asterisco não é garantia de obrigatório`,
       chg6Desc: `Revisando o formulário de lançamento, encontrei campos marcados com * (convênio, nome do paciente) que passavam a impressão de obrigatórios, mas não tinham nenhuma validação real por trás — dava pra salvar em branco mesmo assim. Fechei essa lacuna entre o que a tela promete e o que o código realmente impede, e repliquei a mesma checagem em Nota Fiscal, valor e data de emissão.`,
+      chg7Date: `Jul 2026`, chg7Title: `Bug real: a conta de demonstração caía na tela errada`,
+      chg7Desc: `A marcação de "isto é a conta demo" só era calculada dentro de um branch específico do login (perfil "visualização"). Se a conta de demonstração tivesse outro papel salvo no banco, essa marcação nunca rodava, e o sistema caía no Painel Executivo em vez da Central Cirúrgica — sem nenhum erro visível, só o comportamento errado. Movi a verificação pra rodar sempre, independente de qual caminho do login for seguido.`,
+      chg8Date: `Jul 2026`, chg8Title: `Lembrete de cobrança 2x ao dia, por operador`,
+      chg8Desc: `O lembrete de cobrança (Aguardando Retirada / Ficha OPME) passou a disparar automaticamente às 8h e às 14h, um por operador identificado, bloqueando a tela até a pessoa escolher uma opção — pra não depender de alguém lembrar de cobrar manualmente.`,
+      chg9Date: `Jul 2026`, chg9Title: `Sequência obrigatória no login da conta compartilhada: operador → lembrete → resumo do dia`,
+      chg9Desc: `Nas contas de e-mail compartilhadas entre operadores, unifiquei a ordem: primeiro obriga escolher o nome de quem está operando, só depois mostra o lembrete de cobrança e, por último, abre o resumo do dia automaticamente — sempre nessa ordem, sem depender de qual conta específica a pessoa usou pra entrar.`,
+      chg10Date: `Jul 2026`, chg10Title: `Filtro por mês na aba Atividade`,
+      chg10Desc: `A aba que mostra quem lançou o quê ganhou um filtro por mês, tanto no resumo por operador quanto na lista detalhada de lançamentos — antes só dava pra ver o total acumulado, sem saber quanto foi feito em cada período.`,
+      chg11Date: `Jul 2026`, chg11Title: `Confirmação Sim/Não antes de sair ou mudar notificações`,
+      chg11Desc: `Sair do sistema e ativar/desativar notificações agora pedem uma confirmação explícita antes de executar, evitando ação acidental — um clique errado no botão de sair não desconecta mais ninguém sem querer.`,
+      chg12Date: `Jul 2026`, chg12Title: `Fix de um ReferenceError silencioso que travava sons e atualizações`,
+      chg12Desc: `Uma função estava definida sem underscore (getAudioCtx) mas era chamada com underscore (_getAudioCtx) em dois lugares diferentes — o erro só aparecia no console ao entrar no modo Consolidado e quebrava, sem aviso nenhum, a atualização de estatísticas e cards que vinha depois dela na mesma cadeia de chamadas.`,
+      chg13Date: `Jul 2026`, chg13Title: `Deploy parou de responder ao GitHub: diagnosticado e contornado`,
+      chg13Desc: `Depois de várias tentativas de reenviar o código sem sucesso, entrei no painel de deployments e confirmei, comparando os hashes de commit, que o gatilho automático do GitHub simplesmente parou de chegar em três projetos ao mesmo tempo — não era falha de build. Contornei publicando manualmente via "Create Deployment" enquanto a causa raiz do lado da hospedagem não é resolvida.`,
       stackLabel: `// competências`,
       stackTitle: `O que eu sei fazer,<br><em>com honestidade sobre o nível.</em>`,
       stackGroup1: `// qa &amp; testes`, skill1: `Teste de aceitação (UAT)`, skill2: `Testes manuais`, skill3: `Documentação e reporte de bugs`, skill4: `Análise de requisitos`,
@@ -2023,6 +2093,20 @@ footer {
       chg5Desc: `Era preciso inserir uma pergunta ("a ficha já foi entregue ao stock?") em todos os locais que confirmam a retirada de material. O que parecia um ajuste simples tornou-se uma investigação: ao procurar pelo texto exato da pergunta original, encontrei 6 funções diferentes e independentes a fazer essa mesma confirmação, espalhadas pelo sistema — cada uma precisou do mesmo ajuste, uma a uma, para garantir que nenhum caminho escapasse ao novo estado.`,
       chg6Date: `Jul 2026`, chg6Title: `Campo com asterisco não é garantia de obrigatório`,
       chg6Desc: `Ao rever o formulário de lançamento, encontrei campos marcados com * (convénio, nome do paciente) que davam a impressão de obrigatórios, mas não tinham nenhuma validação real por trás — dava para gravar em branco na mesma. Fechei essa lacuna entre o que o ecrã promete e o que o código realmente impede, e repliquei a mesma verificação em Fatura, valor e data de emissão.`,
+      chg7Date: `Jul 2026`, chg7Title: `Bug real: a conta de demonstração caía no ecrã errado`,
+      chg7Desc: `A marcação de "isto é a conta demo" só era calculada dentro de um ramo específico do login (perfil "visualização"). Se a conta de demonstração tivesse outro papel guardado na base de dados, essa marcação nunca corria, e o sistema caía no Painel Executivo em vez da Central Cirúrgica — sem nenhum erro visível, só o comportamento errado. Movi a verificação para correr sempre, independentemente de qual caminho do login for seguido.`,
+      chg8Date: `Jul 2026`, chg8Title: `Lembrete de cobrança 2x ao dia, por operador`,
+      chg8Desc: `O lembrete de cobrança (Aguardando Retirada / Ficha OPME) passou a disparar automaticamente às 8h e às 14h, um por operador identificado, bloqueando o ecrã até a pessoa escolher uma opção — para não depender de alguém se lembrar de cobrar manualmente.`,
+      chg9Date: `Jul 2026`, chg9Title: `Sequência obrigatória no login da conta partilhada: operador → lembrete → resumo do dia`,
+      chg9Desc: `Nas contas de e-mail partilhadas entre operadores, unifiquei a ordem: primeiro obriga a escolher o nome de quem está a operar, só depois mostra o lembrete de cobrança e, por último, abre o resumo do dia automaticamente — sempre por esta ordem, independentemente de qual conta específica a pessoa usou para entrar.`,
+      chg10Date: `Jul 2026`, chg10Title: `Filtro por mês no separador Atividade`,
+      chg10Desc: `O separador que mostra quem lançou o quê ganhou um filtro por mês, tanto no resumo por operador como na lista detalhada de lançamentos — antes só dava para ver o total acumulado, sem saber quanto foi feito em cada período.`,
+      chg11Date: `Jul 2026`, chg11Title: `Confirmação Sim/Não antes de sair ou mudar notificações`,
+      chg11Desc: `Sair do sistema e ativar/desativar notificações agora pedem uma confirmação explícita antes de executar, evitando ação acidental — um clique errado no botão de sair já não desliga ninguém sem querer.`,
+      chg12Date: `Jul 2026`, chg12Title: `Correção de um ReferenceError silencioso que travava sons e atualizações`,
+      chg12Desc: `Uma função estava definida sem underscore (getAudioCtx) mas era chamada com underscore (_getAudioCtx) em dois locais diferentes — o erro só aparecia na consola ao entrar no modo Consolidado e quebrava, sem aviso nenhum, a atualização de estatísticas e cartões que vinha a seguir na mesma cadeia de chamadas.`,
+      chg13Date: `Jul 2026`, chg13Title: `Deploy deixou de responder ao GitHub: diagnosticado e contornado`,
+      chg13Desc: `Depois de várias tentativas de reenviar o código sem sucesso, entrei no painel de deployments e confirmei, comparando os hashes de commit, que o gatilho automático do GitHub simplesmente deixou de chegar a três projetos ao mesmo tempo — não era falha de build. Contornei publicando manualmente via "Create Deployment" enquanto a causa raiz do lado do alojamento não é resolvida.`,
       stackLabel: `// competências`,
       stackTitle: `O que eu sei fazer,<br><em>com honestidade sobre o nível.</em>`,
       stackGroup1: `// qa &amp; testes`, skill1: `Teste de aceitação (UAT)`, skill2: `Testes manuais`, skill3: `Documentação e reporte de bugs`, skill4: `Análise de requisitos`,
@@ -2130,6 +2214,20 @@ footer {
       chg5Desc: `Había que insertar una pregunta ("¿la ficha ya fue entregada al almacén?") en todos los lugares que confirman el retiro de material. Lo que parecía un ajuste simple se convirtió en una investigación: buscando el texto exacto de la pregunta original, encontré 6 funciones diferentes e independientes haciendo esa misma confirmación, repartidas por el sistema — cada una necesitó el mismo ajuste, una por una, para garantizar que ningún camino escapara al nuevo estado.`,
       chg6Date: `Jul 2026`, chg6Title: `Un campo con asterisco no garantiza que sea obligatorio`,
       chg6Desc: `Al revisar el formulario de registro, encontré campos marcados con * (seguro médico, nombre del paciente) que daban la impresión de ser obligatorios, pero no tenían ninguna validación real detrás — se podía guardar en blanco igual. Cerré esa brecha entre lo que la pantalla promete y lo que el código realmente impide, y repliqué la misma verificación en factura, valor y fecha de emisión.`,
+      chg7Date: `Jul 2026`, chg7Title: `Bug real: la cuenta de demostración caía en la pantalla equivocada`,
+      chg7Desc: `La marca de "esta es la cuenta demo" solo se calculaba dentro de una rama específica del login (perfil "visualización"). Si la cuenta de demostración tenía otro rol guardado en la base de datos, esa marca nunca se ejecutaba, y el sistema caía en el Panel Ejecutivo en lugar de la Central Quirúrgica — sin ningún error visible, solo el comportamiento equivocado. Moví la verificación para que se ejecute siempre, sin importar qué camino del login se siga.`,
+      chg8Date: `Jul 2026`, chg8Title: `Recordatorio de cobro 2 veces al día, por operador`,
+      chg8Desc: `El recordatorio de cobro (Esperando Retiro / Ficha OPME) pasó a dispararse automáticamente a las 8h y las 14h, uno por operador identificado, bloqueando la pantalla hasta que la persona elija una opción — para no depender de que alguien recuerde cobrar manualmente.`,
+      chg9Date: `Jul 2026`, chg9Title: `Secuencia obligatoria en el login de la cuenta compartida: operador → recordatorio → resumen del día`,
+      chg9Desc: `En las cuentas de correo compartidas entre operadores, unifiqué el orden: primero obliga a elegir el nombre de quién está operando, solo después muestra el recordatorio de cobro y, por último, abre el resumen del día automáticamente — siempre en ese orden, sin importar qué cuenta específica usó la persona para entrar.`,
+      chg10Date: `Jul 2026`, chg10Title: `Filtro por mes en la pestaña Actividad`,
+      chg10Desc: `La pestaña que muestra quién registró qué ganó un filtro por mes, tanto en el resumen por operador como en la lista detallada de registros — antes solo se veía el total acumulado, sin saber cuánto se hizo en cada período.`,
+      chg11Date: `Jul 2026`, chg11Title: `Confirmación Sí/No antes de salir o cambiar notificaciones`,
+      chg11Desc: `Salir del sistema y activar/desactivar notificaciones ahora piden una confirmación explícita antes de ejecutar, evitando una acción accidental — un clic equivocado en el botón de salir ya no desconecta a nadie sin querer.`,
+      chg12Date: `Jul 2026`, chg12Title: `Corrección de un ReferenceError silencioso que bloqueaba sonidos y actualizaciones`,
+      chg12Desc: `Una función estaba definida sin guion bajo (getAudioCtx) pero se llamaba con guion bajo (_getAudioCtx) en dos lugares diferentes — el error solo aparecía en la consola al entrar en modo Consolidado y rompía, sin ningún aviso, la actualización de estadísticas y tarjetas que venía después en la misma cadena de llamadas.`,
+      chg13Date: `Jul 2026`, chg13Title: `El deploy dejó de responder a GitHub: diagnosticado y sorteado`,
+      chg13Desc: `Después de varios intentos de reenviar el código sin éxito, entré al panel de deployments y confirmé, comparando los hashes de commit, que el disparador automático de GitHub simplemente dejó de llegar a tres proyectos al mismo tiempo — no era una falla de build. Lo sorteé publicando manualmente vía "Create Deployment" mientras la causa raíz del lado del hosting no se resuelve.`,
       stackLabel: `// competencias`,
       stackTitle: `Lo que sé hacer,<br><em>con honestidad sobre el nivel.</em>`,
       stackGroup1: `// qa &amp; pruebas`, skill1: `Prueba de aceptación (UAT)`, skill2: `Pruebas manuales`, skill3: `Documentación y reporte de bugs`, skill4: `Análisis de requisitos`,
@@ -2237,6 +2335,20 @@ footer {
       chg5Desc: `I needed to insert one question ("has the form already been delivered to stock?") everywhere that confirms material pickup. What looked like a simple tweak turned into an investigation: searching for the exact wording of the original question, I found 6 different, independent functions doing that same confirmation, scattered across the system — each one needed the same fix, one by one, to make sure no path escaped the new status.`,
       chg6Date: `Jul 2026`, chg6Title: `A field marked with an asterisk isn't a guarantee it's required`,
       chg6Desc: `Reviewing the entry form, I found fields marked with * (insurance provider, patient name) that gave the impression of being required, but had no real validation behind them — you could still save them blank. I closed that gap between what the screen promises and what the code actually enforces, and applied the same check to invoice number, amount and issue date.`,
+      chg7Date: `Jul 2026`, chg7Title: `Real bug: the demo account was landing on the wrong screen`,
+      chg7Desc: `The "this is the demo account" flag was only computed inside one specific login branch (the "viewer" role). If the demo account had a different role saved in the database, that flag never ran, and the system defaulted to the Executive Dashboard instead of the Surgical Hub — no visible error, just the wrong behavior. I moved the check to always run, regardless of which login path is taken.`,
+      chg8Date: `Jul 2026`, chg8Title: `Billing reminder twice a day, per operator`,
+      chg8Desc: `The billing reminder (Awaiting Pickup / OPME Form) now fires automatically at 8am and 2pm, one per identified operator, blocking the screen until the person picks an option — so it doesn't depend on someone remembering to follow up manually.`,
+      chg9Date: `Jul 2026`, chg9Title: `Mandatory login sequence for the shared account: operator → reminder → daily summary`,
+      chg9Desc: `For email accounts shared between operators, I unified the order: first it forces picking the name of whoever's operating, only then shows the billing reminder, and lastly opens the daily summary automatically — always in that order, regardless of which specific account the person used to log in.`,
+      chg10Date: `Jul 2026`, chg10Title: `Month filter on the Activity tab`,
+      chg10Desc: `The tab that shows who logged what got a month filter, both in the per-operator summary and the detailed entry list — before you could only see the accumulated total, with no way to tell how much was done in each period.`,
+      chg11Date: `Jul 2026`, chg11Title: `Yes/No confirmation before logging out or changing notifications`,
+      chg11Desc: `Logging out and toggling notifications now require an explicit confirmation before executing, preventing accidental actions — an errant click on the logout button no longer disconnects anyone by mistake.`,
+      chg12Date: `Jul 2026`, chg12Title: `Fixed a silent ReferenceError that was breaking sounds and updates`,
+      chg12Desc: `A function was defined without an underscore (getAudioCtx) but called with one (_getAudioCtx) in two different places — the error only showed up in the console when entering Consolidated mode, and it silently broke the stats and card updates that came right after it in the same call chain.`,
+      chg13Date: `Jul 2026`, chg13Title: `Deploys stopped responding to GitHub: diagnosed and worked around`,
+      chg13Desc: `After several failed attempts to re-push the code, I checked the deployments dashboard and confirmed, by comparing commit hashes, that GitHub's automatic trigger had simply stopped reaching three projects at once — it wasn't a build failure. I worked around it by manually publishing via "Create Deployment" while the root cause on the hosting side remains unresolved.`,
       stackLabel: `// skills`,
       stackTitle: `What I can do,<br><em>with honesty about the level.</em>`,
       stackGroup1: `// qa &amp; testing`, skill1: `User acceptance testing (UAT)`, skill2: `Manual testing`, skill3: `Bug documentation &amp; reporting`, skill4: `Requirements analysis`,
